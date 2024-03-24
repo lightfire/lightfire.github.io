@@ -231,12 +231,18 @@
       let prevRandomIndex = -1;
       let countdownDuration = countdownTime; // Initial countdown duration
 
+      let soundFrontSource = "sounds/hammering-1.wav";
+      let soundFront = new Audio(soundFrontSource); // Preload the audio
+
       function startTimer() {
         timer1 = setInterval(updateCountdown, 1000);
         $("#start-btn").prop("disabled", true);
         $("#pause-btn").prop("disabled", false);
         $("#reset-btn").prop("disabled", false);
         $("#spinner").css("visibility", "visible");
+        // Play the sound repeatedly
+        soundFront.loop = true;
+        soundFront.play();
       }
 
       function pauseTimer() {
@@ -245,6 +251,9 @@
         $("#start-btn").prop("disabled", false);
         $("#pause-btn").prop("disabled", true);
         $("#spinner").css("visibility", "hidden");
+
+        // Stop the sound when pausing the timer
+        soundFront.pause();
       }
 
       function resetTimer() {
@@ -256,6 +265,8 @@
         $("#pause-btn").prop("disabled", true);
         $("#reset-btn").prop("disabled", true);
         $("#spinner").css("visibility", "hidden");
+         // Stop the sound when pausing the timer
+         soundFront.pause();
       }
 
       function applySettings() {
