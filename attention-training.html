@@ -109,7 +109,7 @@
                 <div class="col col-md-9">
                   
                   <div id="spinner" class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar" style="width: 0%">0%</div>
+                    <div id="countdown-progress" class="progress-bar" style="width: 0%">0%</div>
                   </div>
                 </div>
 
@@ -221,6 +221,7 @@
       let countdownTime = settings.countdownTime;
       let phase = 1;
       let prevRandomIndex = -1;
+      let countdownDuration = countdownTime; // Initial countdown duration
 
       function startTimer() {
         timer1 = setInterval(updateCountdown, 1000);
@@ -254,13 +255,14 @@
         settings.soundSource = $("#soundSelect").val();
         $('#exampleModal').modal('hide');
       }
-
+      
       function updateCountdown() {
         if (countdownTime <= 0) {
           clearInterval(phase === 1 ? timer1 : timer2);
           if (phase === 1) {
             phase = 2;
             countdownTime = 420;
+            countdownDuration = countdownTime; // Reset countdown duration for phase 2
             $("#start-btn").css("display", "block");
           } else {
             $("#countdown").html("Countdown Ended");
@@ -271,6 +273,11 @@
           let seconds = countdownTime % 60;
           if(minutes<10){minutes = "0"+minutes; }
           if(seconds<10){seconds = "0"+seconds; }
+          let percentComplete = ((countdownDuration - countdownTime) / countdownDuration) * 100;
+          console.log("Percent:", percentComplete)
+          let progressBar = $("#countdown-progress");
+          progressBar.parent().attr('aria-valuenow', percentComplete);
+          progressBar.css("width", percentComplete + "%").text(percentComplete.toFixed(0) + "%");
           $("#countdown").html(`${minutes}:${seconds}`);
         }
         if (countdownTime % 5 === 0) {
