@@ -143,20 +143,7 @@
 
 
       <div class="col col-md-3">
-        <label for="inputTimerSelect" class="form-label">Countdown Selector</label>
-        <select class="form-select form-select-sm" aria-label="Small select example" id="inputTimerSelect">
-          <option value="300">05:00</option>
-          <option value="360">06:00</option>
-          <option value="420">07:00</option>
-          <option value="480">08:00</option>
-          <option value="540">09:00</option>
-          <option value="600">10:00</option>
-          <option value="660">11:00</option>
-          <option value="720">12:00</option>
-          <option selected value="780">13:00</option>
-          <option value="840">14:00</option>
-          <option value="900">15:00</option>
-        </select>
+        
 
 
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
@@ -205,7 +192,7 @@
 
 
       <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -213,6 +200,25 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+
+
+<div class="mb-3">
+  <label for="inputTimerSelect" class="form-label">Countdown Selector</label>
+        <select class="form-select form-select-sm" aria-label="Small select example" id="inputTimerSelect">
+          <option value="300">05:00</option>
+          <option value="360">06:00</option>
+          <option value="420">07:00</option>
+          <option value="480">08:00</option>
+          <option value="540">09:00</option>
+          <option value="600">10:00</option>
+          <option value="660">11:00</option>
+          <option value="720">12:00</option>
+          <option selected value="780">13:00</option>
+          <option value="840">14:00</option>
+          <option value="900">15:00</option>
+        </select>
+</div>
+
         <div class="mb-3">
           <label for="arrowColorSelect" class="form-label">Select Arrow Color</label>
           <select class="form-select" id="arrowColorSelect">
@@ -263,7 +269,7 @@
       let settings = $.extend({
         countdownTime: $("#inputTimerSelect").val(),
         arrowColor: "blue",
-        soundSource: "sounds/beep-07.wav"
+        soundSource: "sounds/beeps/beep-07.wav"
       }, options);
 
       let timer1, timer2;
@@ -299,6 +305,7 @@
       function resetTimer() {
         clearInterval(timer1);
         countdownTime = settings.countdownTime;
+        countdownDuration = countdownTime; // Update countdown duration
         $("#countdown").html("");
         $("#start-btn").prop("disabled", false);
         $("#pause-btn").prop("disabled", true);
@@ -311,19 +318,15 @@
       function applySettings() {
         settings.arrowColor = $("#arrowColorSelect").val();
         settings.soundSource = $("#soundSelect").val();
-        $('#exampleModal').modal('hide');
+        settings.countdownTime = $("#inputTimerSelect").val();
+        resetTimer();
+        $('#settingsModal').modal('hide');
       }
       
       function updateCountdown() {
         if (countdownTime <= 0) {
-          clearInterval(phase === 1 ? timer1 : timer2);
-          if (phase === 1) {
-            countdownTime = settings.countdownDuration;
-            countdownDuration = countdownTime; // Reset countdown duration for phase 2
-            $("#start-btn").css("display", "block");
-          } else {
-            $("#countdown").html("Countdown Ended");
-          }
+          clearInterval(timer1);
+          $("#countdown").html("Countdown Ended");
         } else {
           countdownTime--;
           let minutes = Math.floor(countdownTime / 60);
@@ -341,11 +344,6 @@
           changeArrowColor();
           
         }
-      }
-
-      function playSound() {
-        let sound = new Audio(settings.soundSource);
-        sound.play();
       }
 
       function playSound(index) {
@@ -380,13 +378,9 @@
     };
   })(jQuery);
 
-  // Example Usage:
+
   $(document).ready(function() {
-    $("#timer-container").timerPlugin({
-      countdownTime: $("#inputTimeSelect").val(),
-      arrowColor: "blue",
-      soundSource: "sounds/beep-07.wav"
-    });
+    $("#timer-container").timerPlugin();
   });
 </script>
   </body>
