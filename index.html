@@ -3,85 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadir Ergun - CV</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Kadir Ergun - CV , Engineering Manager </title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
         }
+
         .container {
-            max-width: 800px;
-            margin: auto;
+            width: 900px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 30%;
+            background-color: #355070;
+            padding: 20px;
+            color: white;
+        }
+
+        .sidebar h2 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .sidebar p {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-section p {
+            margin: 5px 0;
+        }
+
+        /* Personal details icons */
+        .icon {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        /* Right Content Area */
+        .main-content {
+            width: 70%;
             padding: 20px;
         }
-        .section {
+
+        .main-content h1 {
+            font-size: 36px;
+            color: #D27A22;
+        }
+
+        .main-content h2 {
+            font-size: 18px;
+            color: #D27A22;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #D27A22;
+            padding-bottom: 5px;
+        }
+
+        .main-content h3 {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .main-content p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .work-experience, .education, .skills, .projects {
             margin-bottom: 20px;
         }
-        .section h2 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+
+        .main-content ul {
+            margin-left: 20px;
+        }
+
+        /* Language section with stars */
+        .stars {
+            display: inline-block;
+        }
+
+        .stars span {
+            color: #000;
+            font-size: 16px;
+        }
+
+        /* Footer styles */
+        .footer {
+            font-size: 12px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        /* Skills and Experience sections */
+        .skills ul, .previous-experience ul {
+            list-style-type: square;
+            margin-left: 20px;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <header class="text-center my-4">
+        <!-- Sidebar (Left) -->
+        <div class="sidebar">
+            <div class="image-placeholder">
+                <img src="1709904831969.jpg" alt="Profile Picture" width="150" height="150" style="border-radius: 50%; display: block; margin: 0 auto;">
+            </div>
+
+            <div class="sidebar-section">
+                <h2>Personal</h2>
+                <p><i class="icon">&#128100;</i> Name: Kadir Ergun</p>
+                <p><i class="icon">&#128197;</i> Date of Birth: 21/07/1988</p>
+                <p><i class="icon">&#127968;</i> Location: Istanbul, Turkey</p>
+                <p><i class="icon">&#128222;</i> Phone: +90 507 103 7277</p>
+                <p><i class="icon">&#9993;</i> Email: kadirergun@yandex.com</p>
+                <p><i class="icon">&#128279;</i> LinkedIn: <a href="#" style="color: white; text-decoration: underline;">linkedin.com/in/kadirergun</a></p>
+            </div>
+
+            <div class="sidebar-section">
+                <h2>Languages</h2>
+                <p>English: <span class="stars">★★★★★</span></p>
+                <p>Turkish: <span class="stars">★★★★★</span></p>
+                <p>German: <span class="stars">★★★☆☆</span></p>
+            </div>
+
+            <div class="sidebar-section skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Leadership & Team Management: Expert in leading cross-functional teams, mentoring, and providing technical direction.</li>
+                    <li>Project Management: Extensive experience in full project lifecycle management, resource allocation, and risk management.</li>
+                    <li>Technical Leadership: Strong in code reviews, ensuring SOLID principles, system design, and driving architecture improvements.</li>
+                    <li>DevOps & CI/CD: Proficient in Jenkins, Kubernetes, Docker, CI/CD pipelines, cloud-native architectures (Huawei Cloud, Azure).</li>
+                    <li>Agile Methodologies: Expertise in Scrum, Kanban, sprint planning, and backlog management.</li>
+                    <li>Microservices Architecture: Skilled in Spring Boot, Kubernetes, RESTful APIs, Kafka, Redis, MyBatis, and ElasticSearch.</li>
+                    <li>Web & Mobile Development: Android development, E-commerce platforms, and CMS platforms (Kentico, Sitecore, Xperience).</li>
+                    <li>Database Management: MongoDB, MySQL, PostgreSQL, Redis.</li>
+                    <li>Client & Vendor Management: Extensive experience in stakeholder communication, vendor negotiation, and project reporting.</li>
+                    <li>Analytical Skills: Success metrics collection and analysis, performance optimization, and technical problem-solving.</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h2>Hobbies</h2>
+                <p>Driving</p>
+                <p>Cooking</p>
+            </div>
+        </div>
+
+        <!-- Main Content Area (Right) -->
+        <div class="main-content">
             <h1>Kadir Ergun</h1>
-            <p>Istanbul, Istanbul, Türkiye</p>
-            <p>Email: <a href="mailto:kadirergun@yandex.com">kadirergun@yandex.com</a> | Phone: 05071037277</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kadir-ergun" target="_blank">linkedin.com/in/kadir-ergun</a></p>
-        </header>
+            <p>Engineering Manager and Technical Lead with over 10 years of experience in software development, team leadership, and technical project management across various industries.</p>
 
-        <section class="section">
-            <h2>Summary</h2>
-            <p>Engineering Manager - Technical Lead</p>
-            <p>Certified Kentico Developer</p>
-            <p><a href="https://kadirergun.com" target="_blank">https://kadirergun.com</a></p>
-        </section>
+            <div class="education">
+                <h2>Education</h2>
+                <p><strong>Okan University</strong> – Master of Business Administration (MBA) (2016)</p>
+                <p><strong>Işık University</strong> – Associate of Arts and Sciences (A.A.S.), Management Information Systems (2008–2013)</p>
+            </div>
 
-        <section class="section">
-            <h2>Experience</h2>
-            <h3>Engineering Manager at Huawei</h3>
-            <p>Jul 2022 - Present (1 year 11 months)</p>
-            <p>WeFocus is a SaaS application, focused on employee engagement. Developed using Java, VueJS, MongoDB, PostgreSQL, Kubernetes, Istio in a microservice environment. Technologies used: Spring Boot, Microservice architecture, ElasticSearch, NLP, Restful, Kafka, Kubernetes, MySQL, MongoDB, Jenkins.</p>
-            <p>Petal Maps: A map service provided by Huawei to devices with HarmonyOS, Android, and iOS. Technologies used: Spring Boot, Microservice architecture, MyBatis, Restful, Kafka, Hibernate, Redis, MySQL, Jenkins.</p>
-            <p>EBG Huawei website project.</p>
-            <h3>Senior Product Manager at Turkcell Global Bilgi</h3>
-            <p>Jan 2022 - Jul 2022 (7 months)</p>
-            <p>Turkcell Devops Team application operations (Jenkins, Java, MacOsx, Redhat, Jira, All Turkcell applications devops processes)</p>
-            <p>Garanti BBA banking CHATBOT application (Project Management Support + Robotic Process Coding) UI Path and Global Bilgi RPA product.</p>
-            <!-- Add more experience here in similar format -->
-        </section>
+            <div class="work-experience">
+                <h2>Work Experience</h2>
 
-        <section class="section">
-            <h2>Projects</h2>
-            <p>KoçAilem mobile application Backend API layer, kocailem.com, ford.com.tr, fenerbahce.org, fenerum.com, koc.com.tr, divan.com.tr, divanpastaneleri.com.tr, hopi.com.tr, amerikanhastanesi.org, ingage.media, kocbayi.com.tr, koczer.com, ktsk.com.tr, ktsk sports festival, kocdigital.com, vkv encyclopedia, sek.com.tr, otokar.com.tr, tat.com. Developing software, creating information architecture for sites such as tr, turmepa.org.tr, ulkemicin.com.tr, eczacibasi.com.tr, selfit.com.tr, dynavit.com.tr.</p>
-        </section>
+                <h3>Engineering Manager | Huawei | Istanbul, Turkey | Jul 2022 – Present</h3>
+                <p>WeFocus SaaS Application: Developed a microservices-based employee engagement platform using Java, VueJS, MongoDB, PostgreSQL, Kubernetes, and Istio. Improved platform performance by 30%.</p>
+                <p>Petal Maps: Led the development of Petal Maps, a navigation app for HarmonyOS, Android, and iOS, using Spring Boot, MyBatis, Kafka, Hibernate, and Redis.</p>
+                <ul>
+                    <li>Technologies Used: Spring Boot, Microservices, ElasticSearch, NLP, Restful, Kafka, Kubernetes, MySQL, MongoDB, Jenkins.</li>
+                </ul>
 
-        <section class="section">
-            <h2>Education</h2>
-            <p><strong>Işık Üniversitesi</strong> - Associate of Arts and Sciences (A.A.S.), Management Information Systems, General (2008 - 2013)</p>
-            <p><strong>Okan University</strong> - İşletme Yüksek Lisans Programı (MBA), İşletme (2016 - 2016)</p>
-            <p><strong>Bahçelievler Anadolu Lisesi</strong> (2002 - 2006)</p>
-        </section>
+                <h3>Senior Product Manager | Turkcell Global Bilgi | Jan 2022 – Jul 2022</h3>
+                <p>Managed DevOps operations and led Garanti BBA banking Chatbot project using RPA coding and UI Path automation.</p>
+                <ul>
+                    <li>Technologies Used: Jenkins, Java, RedHat, MacOS, Jira, RPA (UI Path).</li>
+                </ul>
 
-        <section class="section">
-            <h2>Licenses & Certifications</h2>
-            <p>Kentico Certified Developer for Kentico 12 - Kentico (Issued May 2019 - Expires May 2021)</p>
-            <!-- Add more certifications here -->
-        </section>
+                <h3>Technical Lead | PortalGrup | Aug 2018 – Jan 2022</h3>
+                <p>Led a team of 40+ members, including Frontend, Backend, and Mobile teams, to develop and manage e-commerce platforms, backend APIs, payment integrations, and marketplace connections. Managed the development teams ensuring adherence to SOLID principles, conducting code reviews, and ensuring quality control.</p>
+                <ul>
+                    <li>Technologies Used: Kentico, Azure DevOps, MSSQL, Java, ASP.NET MVC, CMS, Agile Methodologies.</li>
+                </ul>
+            </div>
 
-        <section class="section">
-            <h2>Skills</h2>
-            <p>Kubernetes, Spring Boot, Microservices, ASP.NET, E-Commerce, Jenkins, Java, PHP, React Native, Android Development</p>
-        </section>
+            <div class="previous-experience">
+                <h2>Previous Experience</h2>
+                <ul>
+                    <li><strong>Senior Android Developer</strong> | PortalGrup | Mar 2016 – Aug 2018: Developed Android apps for Bayer and event-based apps like Zubizu QR.</li>
+                    <li><strong>IT Project Manager & Software Developer</strong> | Meryüz Bilişim | Dec 2014 – Feb 2016: Led full lifecycle software projects, including server and Android development.</li>
+                    <li><strong>Freelance Software Developer</strong> | Jul 2009 – Sep 2014: Developed backend and mobile systems using PHP, MySQL, and HTML/CSS.</li>
+                    <li><strong>Intern</strong> | INDEX Group | Aug 2013 – Sep 2013: Internship in IT department at Index Group.</li>
+                </ul>
+            </div>
 
-        <section class="section">
-            <h2>Honors & Awards</h2>
-            <p>Sparkling Star - Huawei (Dec 2023)</p>
-            <!-- Add more awards here -->
-        </section>
+            <div class="projects">
+                <h2>Projects</h2>
+
+                <h3>WeFocus | Huawei | Jul 2022 – May 2023</h3>
+                <p>Developed a microservices-based employee engagement platform using Java, VueJS, MongoDB, PostgreSQL, Kubernetes, and Istio.</p>
+                <ul>
+                    <li>Skills Used: Kubernetes, Java, DevOps, Spring Boot, Product Lifecycle Management, People Management, Agile Methodologies.</li>
+                </ul>
+
+                <h3>KoçAilem | PortalGrup | Nov 2018 – Dec 2021</h3>
+                <p>Loyalty application for Koç Holding employees and families, serving 200K users.</p>
+                <ul>
+                    <li>Skills Used: C#, DevOps, Kentico, Product Lifecycle Management, People Management.</li>
+                    <li>Project Link: <a href="https://kocailem.com">KoçAilem</a></li>
+                </ul>
+
+                <h3>Fenerium E-Commerce Website</h3>
+                <p>Developed a robust online platform for Fenerbahçe S.K. fans, integrating payment systems and personalized recommendations.</p>
+                <ul>
+                    <li>Skills Used: .NET, E-Commerce, Kentico, Product Lifecycle Management, Marketing Automation.</li>
+                    <li>Project Link: <a href="https://fenerium.com">Fenerium</a></li>
+                </ul>
+
+                <h3>Additional Projects</h3>
+                <p>Managed and developed platforms including:</p>
+                <ul>
+                    <li><a href="https://avis.com.tr">Avis Turkey</a></li>
+                    <li><a href="https://budget.com.tr">Budget Turkey</a></li>
+                    <li><a href="https://divanpastaneleri.com.tr">Divan Pastaneleri</a></li>
+                    <li><a href="https://hopi.com.tr">Hopi</a></li>
+                    <li><a href="https://amerikanhastanesi.org">American Hospital</a></li>
+                    <li><a href="https://ingage.media">Ingage Media</a></li>
+                    <li><a href="https://kocbayi.com.tr">Koç Bayi</a></li>
+                    <li><a href="https://koczer.com">Koç Zer</a></li>
+                    <li><a href="https://ktsk.com.tr">KTSK</a> & <a href="https://ktsk.com.tr">KTSK Sports Festival</a></li>
+                    <li><a href="https://kocdigital.com">Koç Digital</a></li>
+                    <li><a href="https://vkvencyclopedia.com">VKV Encyclopedia</a></li>
+                    <li><a href="https://sek.com.tr">SEK</a></li>
+                    <li><a href="https://tat.com">Tat</a></li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <p>References available upon request.</p>
+            </div>
+        </div>
     </div>
 </body>
+
+
+
 </html>
