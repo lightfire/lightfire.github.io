@@ -1,436 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kadir Ergun - CV , Engineering Manager </title>
     <style>
         body {
-    font-family: 'Calibri', 'Arial', sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-}
-
-/* Anchor links styling */
-a {
-    color: #D27A22;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #FF9900;
-}
-
-/* Unordered list styling */
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Image box-shadow for profile picture */
-.image-placeholder img {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Container for main content */
-.container {
-    width: 900px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Left Sidebar */
-.sidebar {
-    width: 30%;
-    background-color: #355070;
-    padding: 20px;
-    color: white;
-}
-
-/* Sidebar Headers */
-.sidebar h2 {
-    color: #fff;
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-/* General Sidebar Paragraph Styling */
-.sidebar p {
-    margin-bottom: 10px;
-}
-
-/* Sidebar Section Styling */
-.sidebar-section {
-    margin-bottom: 30px;
-}
-
-.sidebar-section p {
-    margin: 5px 0;
-}
-
-/* Personal Details Icons */
-.icon {
-    margin-right: 10px;
-    font-size: 16px;
-}
-
-/* Main Content Area */
-.main-content {
-    width: 70%;
-    padding: 20px;
-}
-
-/* Main Content Headings */
-.main-content h1 {
-    font-size: 36px;
-    color: #D27A22;
-}
-
-.main-content h2 {
-    font-size: 18px;
-    color: #ffffff;
-    background-color: #355070;
-    padding: 5px 10px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-/* Work Experience and Education Styling */
-.main-content h3 {
-    background-color: #f0f0f0;
-    padding: 5px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
-    border-left: 4px solid #D27A22;
-}
-
-/* General Paragraph Styling */
-.main-content p {
-    margin-bottom: 10px;
-}
-
-/* Section Margins */
-.work-experience, .education, .skills, .projects {
-    margin-bottom: 20px;
-}
-
-.main-content ul {
-    margin-left: 20px;
-}
-
-/* Language section with stars */
-.stars {
-    display: inline-block;
-}
-
-.stars span {
-    color: #000;
-    font-size: 16px;
-}
-
-/* Footer styles */
-.footer {
-    font-size: 12px;
-    color: #555;
-    margin-top: 20px;
-}
-
-/* Skills and Experience sections with square bullet points */
-.skills ul, .previous-experience ul {
-    list-style-type: square;
-    margin-left: 20px;
-}
-
-/* Sidebar Icons and Links */
-.sidebar-section a i {
-    font-size: 18px;
-    margin-right: 15px;
-}
-
-/* Sidebar Links and Spacing */
-.sidebar-section a {
-    display: inline-block;
-    margin-bottom: 10px;
-    color: white;
-    text-decoration: none;
-}
-
-/* Flexbox for Aligning Icons and Text */
-.sidebar-section p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* Sidebar Icon Sizing */
-.sidebar-section i {
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-/* Sidebar Hover Effect */
-.sidebar-section p a:hover {
-    color: #ddd;
-}
-
-/* Flexbox for Icon Alignment */
-.sidebar-section span {
-    display: flex;
-    align-items: center;
-}
-
-/* Projects Section */
-.projects h3 {
-    font-size: 14px;  /* Smaller font size for project titles */
-    color: #333;
-    margin-top: 5px; /* Reduced margin */
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.projects p {
-    font-size: 12px;  /* Smaller font size for descriptions */
-    margin-bottom: 5px; /* Reduced space between paragraphs */
-    color: #555;
-}
-
-.projects ul {
-    margin-left: 15px; /* Smaller left margin */
-    margin-bottom: 5px; /* Less space between list items */
-}
-
-.projects li {
-    font-size: 12px;  /* Smaller font size for list items */
-    margin-bottom: 3px; /* Reduced space between list items */
-}
-
-.projects {
-    margin-bottom: 15px; /* Reduced bottom margin */
-}
-
-/* Projects Section */
-.projects h3 {
-        font-size: 12px; /* Smaller font size for project titles */
-        color: #333;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        font-weight: bold;
-        display: inline; /* Display title and description inline */
-    }
-
-    .projects span.description {
-        font-size: 12px; /* Smaller font for descriptions */
-        color: #777; /* Lighter color for description */
-        margin-left: 10px; /* Space between title and description */
-    }
-
-    .projects ul {
-        margin:0;
-    }
-
-    .projects li {
-        font-size: 12px;
-        margin-bottom: 3px;
-    }
-
-    /* Sidebar Skills Section */
-    .skills ul {
-        list-style-type: none; /* Remove default list style */
-        padding-left: 0; /* Remove left padding */
-        padding-top: 0;
-    }
-
-    .skills ul li {
-        margin-left: 0; /* Remove left margin */
-        padding-left: 10px; /* Add some padding to align neatly */
-        text-indent: -10px; /* Adjust the text indent for better alignment */
-        position: relative;
-    }
-
-    .skills ul li:before {
-        content: "•"; /* Use bullet point */
-        color: #D27A22; /* Change bullet point color */
-        position: absolute;
-        left: 0; /* Align bullet point closer to the text */
-        top: 0;
-    }
-    .project-link {
-        font-size: 12px; /* Make the project link smaller */
-        margin-bottom: 10px;
-    }
-
-    .project-link a {
-        color: #D27A22;
-        text-decoration: none;
-    }
-
-    .project-link a:hover {
-        text-decoration: underline;
-    }
-
-
-     
-
-
-    /* Styles specific for print */
-    @media print {
-        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
             margin: 0;
             padding: 0;
-            background-color: white;
         }
+
+        /* Anchor links styling */
+        a {
+            color: #D27A22;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #FF9900;
+        }
+
+        /* Unordered list styling */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Image box-shadow for profile picture */
+        .image-placeholder img {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container for main content */
         .container {
-            width: 100%;
+            width: 900px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 30%;
+            background-color: #355070;
+            padding: 20px;
+            color: white;
+        }
+
+        /* Sidebar Headers */
+        .sidebar h2 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* General Sidebar Paragraph Styling */
+        .sidebar p {
+            margin-bottom: 10px;
+        }
+
+        /* Sidebar Section Styling */
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-section p {
+            margin: 5px 0;
+        }
+
+        /* Personal Details Icons */
+        .icon {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            width: 70%;
+            padding: 20px;
+        }
+
+        /* Main Content Headings */
+        .main-content h1 {
+            font-size: 36px;
+            color: #D27A22;
+        }
+
+        .main-content h2 {
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #355070;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        /* Work Experience and Education Styling */
+        .main-content h3 {
+            background-color: #f0f0f0;
+            padding: 5px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+            border-left: 4px solid #D27A22;
+        }
+
+        /* General Paragraph Styling */
+        .main-content p {
+            margin-bottom: 10px;
+        }
+
+        /* Section Margins */
+        .work-experience,
+        .education,
+        .skills,
+        .projects {
+            margin-bottom: 20px;
+        }
+
+        .main-content ul {
+            margin-left: 20px;
+        }
+
+        /* Language section with stars */
+        .stars {
+            display: inline-block;
+        }
+
+        .stars span {
+            color: #000;
+            font-size: 16px;
+        }
+
+        /* Footer styles */
+        .footer {
+            font-size: 12px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        /* Skills and Experience sections with square bullet points */
+        .skills ul,
+        .previous-experience ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        /* Sidebar Icons and Links */
+        .sidebar-section a i {
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+        /* Sidebar Links and Spacing */
+        .sidebar-section a {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Flexbox for Aligning Icons and Text */
+        .sidebar-section p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        /* Sidebar Icon Sizing */
+        .sidebar-section i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Sidebar Hover Effect */
+        .sidebar-section p a:hover {
+            color: #ddd;
+        }
+
+        /* Flexbox for Icon Alignment */
+        .sidebar-section span {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Projects Section */
+        .projects h3 {
+            font-size: 14px;
+            /* Smaller font size for project titles */
+            color: #333;
+            margin-top: 5px;
+            /* Reduced margin */
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .projects p {
+            font-size: 12px;
+            /* Smaller font size for descriptions */
+            margin-bottom: 5px;
+            /* Reduced space between paragraphs */
+            color: #555;
+        }
+
+        .projects ul {
+            margin-left: 15px;
+            /* Smaller left margin */
+            margin-bottom: 5px;
+            /* Less space between list items */
+        }
+
+        .projects li {
+            font-size: 12px;
+            /* Smaller font size for list items */
+            margin-bottom: 3px;
+            /* Reduced space between list items */
+        }
+
+        .projects {
+            margin-bottom: 15px;
+            /* Reduced bottom margin */
+        }
+
+        /* Projects Section */
+        .projects h3 {
+            font-size: 12px;
+            /* Smaller font size for project titles */
+            color: #333;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            display: inline;
+            /* Display title and description inline */
+        }
+
+        .projects span.description {
+            font-size: 12px;
+            /* Smaller font for descriptions */
+            color: #777;
+            /* Lighter color for description */
+            margin-left: 10px;
+            /* Space between title and description */
+        }
+
+        .projects ul {
             margin: 0;
-            padding: 0;
-            box-shadow: none;
         }
 
-        /* Force background colors and keep color styles */
-        * {
-            -webkit-print-color-adjust: exact; /* For Chrome/Safari */
-            color-adjust: exact; /* For Firefox */
+        .projects li {
+            font-size: 12px;
+            margin-bottom: 3px;
         }
 
-        /* Make only the container visible for printing */
-        body * {
-            visibility: hidden;
-        }
-        .container, .container * {
-            visibility: visible;
+        /* Sidebar Skills Section */
+        .skills ul {
+            list-style-type: none;
+            /* Remove default list style */
+            padding-left: 0;
+            /* Remove left padding */
+            padding-top: 0;
         }
 
-        /* Disable margins around the content */
-        .container {
+        .skills ul li {
+            margin-left: 0;
+            /* Remove left margin */
+            padding-left: 10px;
+            /* Add some padding to align neatly */
+            text-indent: -10px;
+            /* Adjust the text indent for better alignment */
+            position: relative;
+        }
+
+        .skills ul li:before {
+            content: "•";
+            /* Use bullet point */
+            color: #D27A22;
+            /* Change bullet point color */
             position: absolute;
-            top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            margin: 0;
-            padding: 0;
+            /* Align bullet point closer to the text */
+            top: 0;
         }
-    }
 
-    /* Sidebar and other element colors */
-    .sidebar {
-        background-color: #355070; /* Keep sidebar color for print */
-        color: white;
-    }
-    .main-content h1, .main-content h2, .main-content h3 {
-        color: #D27A22;
-    }
-    .main-content h2 {
-        background-color: #355070; /* Ensure h2 background stays visible */
-        color: #ffffff;
-    }
+        .project-link {
+            font-size: 12px;
+            /* Make the project link smaller */
+            margin-bottom: 10px;
+        }
+
+        .project-link a {
+            color: #D27A22;
+            text-decoration: none;
+        }
+
+        .project-link a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+        /* Styles specific for print */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            /* Force background colors and keep color styles */
+            * {
+                -webkit-print-color-adjust: exact;
+                /* For Chrome/Safari */
+                color-adjust: exact;
+                /* For Firefox */
+            }
+
+            /* Make only the container visible for printing */
+            body * {
+                visibility: hidden;
+            }
+
+            .container,
+            .container * {
+                visibility: visible;
+            }
+
+            /* Disable margins around the content */
+            .container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        /* Sidebar and other element colors */
+        .sidebar {
+            background-color: #355070;
+            /* Keep sidebar color for print */
+            color: white;
+        }
+
+        .main-content h1,
+        .main-content h2,
+        .main-content h3 {
+            color: #D27A22;
+        }
+
+        .main-content h2 {
+            background-color: #355070;
+            /* Ensure h2 background stays visible */
+            color: #ffffff;
+        }
 
 
 
         /* General styles for normal screen display */
         @media screen {
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-        .container {
-            width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-    }
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #f8f8f8;
+            }
 
-    /* Styles specific for print */
-    @media print {
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: white;
-        }
-        .container {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            box-shadow: none;
+            .container {
+                width: 900px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            }
         }
 
-        /* Force background colors and keep color styles */
-        * {
-            -webkit-print-color-adjust: exact; /* For Chrome/Safari */
-            color-adjust: exact; /* For Firefox */
+        /* Styles specific for print */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            /* Force background colors and keep color styles */
+            * {
+                -webkit-print-color-adjust: exact;
+                /* For Chrome/Safari */
+                color-adjust: exact;
+                /* For Firefox */
+            }
+
+            /* Make only the container visible for printing */
+            body * {
+                visibility: hidden;
+            }
+
+            .container,
+            .container * {
+                visibility: visible;
+            }
+
+            /* Disable margins around the content */
+            .container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+                padding: 0;
+            }
         }
 
-        /* Make only the container visible for printing */
-        body * {
-            visibility: hidden;
+        /* Sidebar and other element colors */
+        .sidebar {
+            background-color: #355070;
+            /* Keep sidebar color for print */
+            color: white;
         }
-        .container, .container * {
-            visibility: visible;
+
+        .main-content h1,
+        .main-content h2,
+        .main-content h3 {
+            color: #D27A22;
         }
 
-        /* Disable margins around the content */
-        .container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: 0;
-            padding: 0;
+        .main-content h2 {
+            background-color: #355070;
+            /* Ensure h2 background stays visible */
+            color: #ffffff;
         }
-    }
 
-    /* Sidebar and other element colors */
-    .sidebar {
-        background-color: #355070; /* Keep sidebar color for print */
-        color: white;
-    }
-    .main-content h1, .main-content h2, .main-content h3 {
-        color: #D27A22;
-    }
-    .main-content h2 {
-        background-color: #355070; /* Ensure h2 background stays visible */
-        color: #ffffff;
-    }
+        /* Adjust main content padding for alignment */
+        .main-content {
+            padding-left: 30px;
+            /* Adjust this padding to center content better */
+        }
 
-    /* Adjust main content padding for alignment */
-    .main-content {
-        padding-left: 30px; /* Adjust this padding to center content better */
-    }
+        /* Work experience adjustments */
+        .work-experience h3,
+        .work-experience p,
+        .work-experience ul {
+            padding-left: 10px;
+            /* Adjust this padding to bring it to the right */
+            margin-left: 0;
+            /* Reset margin to avoid extra left shift */
+        }
 
-    /* Work experience adjustments */
-    .work-experience h3, .work-experience p, .work-experience ul {
-        padding-left: 10px; /* Adjust this padding to bring it to the right */
-        margin-left: 0; /* Reset margin to avoid extra left shift */
-    }
+        /* Skills adjustments to reduce spacing */
+        .skills ul li {
+            padding-left: 10px;
+            /* Slightly move to the right */
+            margin-left: 0;
+            /* Reset to align properly */
+        }
 
-    /* Skills adjustments to reduce spacing */
-    .skills ul li {
-        padding-left: 10px; /* Slightly move to the right */
-        margin-left: 0; /* Reset to align properly */
-    }
-
-    /* Ensure consistent padding inside main content */
-    .main-content p, .main-content ul {
-        padding-left: 10px;
-    }
-        
-
+        /* Ensure consistent padding inside main content */
+        .main-content p,
+        .main-content ul {
+            padding-left: 10px;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -441,40 +499,42 @@ ul li {
         <!-- Sidebar (Left) -->
         <div class="sidebar">
             <div class="image-placeholder">
-                <img src="1709904831969.jpg" alt="Profile Picture" width="150" height="150" style="border-radius: 50%; display: block; margin: 0 auto;">
+                <img src="1709904831969.jpg" alt="Profile Picture" width="150" height="150"
+                    style="border-radius: 50%; display: block; margin: 0 auto;">
             </div>
 
             <div class="sidebar-section">
                 <h2>Personal</h2>
-            
+
                 <!-- Name Section -->
                 <p><span><i class="fas fa-user"></i> Kadir Ergun</span></p>
-            
+
                 <!-- Date of Birth Section -->
                 <p><span><i class="fas fa-birthday-cake"></i> 21/07/1988</span></p>
-            
+
                 <!-- Location Section -->
                 <p><span><i class="fas fa-map-marker-alt"></i> Istanbul, Turkey</span></p>
-            
+
                 <!-- Phone Section -->
                 <p><a href="tel:+905071037277" style="color: white; text-decoration: none;">
-                    <span><i class="fas fa-phone"></i> +90 507 103 7277</span></a></p>
-            
+                        <span><i class="fas fa-phone"></i> +90 507 103 7277</span></a></p>
+
                 <!-- Email Section -->
                 <p><a href="mailto:kadirergun@yandex.com" style="color: white; text-decoration: none;">
-                    <span><i class="fas fa-envelope"></i> kadirergun@yandex.com</span></a></p>
-            
+                        <span><i class="fas fa-envelope"></i> kadirergun@yandex.com</span></a></p>
+
                 <!-- LinkedIn Section -->
-                <p><a href="https://linkedin.com/in/kadirergun" target="_blank" style="color: white; text-decoration: none;">
-                    <span><i class="fab fa-linkedin"></i> linkedin.com/in/kadirergun</span></a></p>
-            
+                <p><a href="https://linkedin.com/in/kadirergun" target="_blank"
+                        style="color: white; text-decoration: none;">
+                        <span><i class="fab fa-linkedin"></i> linkedin.com/in/kadirergun</span></a></p>
+
                 <!-- GitHub Section -->
                 <p><a href="https://github.com/lightfire" target="_blank" style="color: white; text-decoration: none;">
-                    <span><i class="fab fa-github"></i> github.com/lightfire</span></a></p>
+                        <span><i class="fab fa-github"></i> github.com/lightfire</span></a></p>
             </div>
-            
-            
-            
+
+
+
 
             <div class="sidebar-section">
                 <h2>Languages</h2>
@@ -486,16 +546,24 @@ ul li {
             <div class="sidebar-section skills">
                 <h2>Skills</h2>
                 <ul>
-                    <li>Leadership & Team Management: Expert in leading cross-functional teams, mentoring, and providing technical direction.</li>
-                    <li>Project Management: Extensive experience in full project lifecycle management, resource allocation, and risk management.</li>
-                    <li>Technical Leadership: Strong in code reviews, ensuring SOLID principles, system design, and driving architecture improvements.</li>
-                    <li>DevOps & CI/CD: Proficient in Jenkins, Kubernetes, Docker, CI/CD pipelines, cloud-native architectures (Huawei Cloud, Azure).</li>
+                    <li>Leadership & Team Management: Expert in leading cross-functional teams, mentoring, and providing
+                        technical direction.</li>
+                    <li>Project Management: Extensive experience in full project lifecycle management, resource
+                        allocation, and risk management.</li>
+                    <li>Technical Leadership: Strong in code reviews, ensuring SOLID principles, system design, and
+                        driving architecture improvements.</li>
+                    <li>DevOps & CI/CD: Proficient in Jenkins, Kubernetes, Docker, CI/CD pipelines, cloud-native
+                        architectures (Huawei Cloud, Azure).</li>
                     <li>Agile Methodologies: Expertise in Scrum, Kanban, sprint planning, and backlog management.</li>
-                    <li>Microservices Architecture: Skilled in Spring Boot, Kubernetes, RESTful APIs, Kafka, Redis, MyBatis, and ElasticSearch.</li>
-                    <li>Web & Mobile Development: Android development, E-commerce platforms, and CMS platforms (Kentico, Sitecore, Xperience).</li>
+                    <li>Microservices Architecture: Skilled in Spring Boot, Kubernetes, RESTful APIs, Kafka, Redis,
+                        MyBatis, and ElasticSearch.</li>
+                    <li>Web & Mobile Development: Android development, E-commerce platforms, and CMS platforms (Kentico,
+                        Sitecore, Xperience).</li>
                     <li>Database Management: MongoDB, MySQL, PostgreSQL, Redis.</li>
-                    <li>Client & Vendor Management: Extensive experience in stakeholder communication, vendor negotiation, and project reporting.</li>
-                    <li>Analytical Skills: Success metrics collection and analysis, performance optimization, and technical problem-solving.</li>
+                    <li>Client & Vendor Management: Extensive experience in stakeholder communication, vendor
+                        negotiation, and project reporting.</li>
+                    <li>Analytical Skills: Success metrics collection and analysis, performance optimization, and
+                        technical problem-solving.</li>
                 </ul>
             </div>
 
@@ -509,119 +577,198 @@ ul li {
         <!-- Main Content Area (Right) -->
         <div class="main-content">
             <h1>Kadir Ergun</h1>
-            <p>Engineering Manager and Technical Lead with over 10 years of experience in software development, team leadership, and technical project management across various industries.</p>
+            <p>Engineering Manager and Technical Lead with over 10 years of experience in software development, team
+                leadership, and technical project management across various industries.</p>
 
             <div class="education">
                 <h2>Education</h2>
                 <p><strong>Okan University</strong> – Master of Business Administration (MBA) (2016 - )</p>
-                <p><strong>Işık University</strong> – Associate of Arts and Sciences (A.A.S.), Management Information Systems (2008–2013)</p>
+                <p><strong>Işık University</strong> – Associate of Arts and Sciences (A.A.S.), Management Information
+                    Systems (2008–2013)</p>
             </div>
 
             <div class="work-experience">
                 <h2>Work Experience</h2>
-            
+
                 <ul>
                     <li>
-                        <h3>Engineering Manager | Huawei | Istanbul, Turkey | Jul 2022 – Present</h3>
-                        <p>Leading the development of large-scale projects, including employee engagement platforms and navigation services.</p>
+                        <h3>Business Solutions Chief | İSPER A.Ş. (Istanbul Metropolitan Municipality Subsidiary) |
+                            Istanbul, Turkey | Jan 2025 – Present</h3>
+                        <p>Leading digital transformation and enterprise solution strategies across municipal services.
+                            Managing ERP operations, DevOps practices, internal software development, KPI frameworks,
+                            and vendor coordination in alignment with strategic objectives.</p>
                         <ul>
-                            <li><strong>WeFocus SaaS Application</strong>: Developed a microservices-based employee engagement platform using Java, VueJS, MongoDB, PostgreSQL, Kubernetes, and Istio. Improved platform performance by 30%.</li>
-                            <li><strong>Petal Maps</strong>: Led the development of Petal Maps, a navigation app for HarmonyOS, Android, and iOS, using Spring Boot, MyBatis, Kafka, Hibernate, and Redis.</li>
-                            <li><strong>EBG (e.huawei.com) E-commerce B2B Multilingual Website Project</strong>: Led custom CMS development for Huawei’s B2B e-commerce platform, handling multilingual capabilities.</li>
+                            <li>Led the end-to-end implementation and customization of Logo ERP, including J-HR and
+                                J-Platform modules, integrating with municipal operations.</li>
+                            <li>Oversaw internal development teams in delivering .NET Core–based applications integrated
+                                with MSSQL and LDAP authentication mechanisms.</li>
+                            <li>Planned and deployed Kubernetes-based microservices for internal APIs, enhancing
+                                scalability and resilience across systems.</li>
+                            <li>Managed CI/CD pipelines and DevOps environments using Azure DevOps, facilitating
+                                automatic deployments across staging and production environments.</li>
+                            <li>Designed and implemented Power BI dashboards for operational and financial reporting,
+                                enabling real-time decision-making across departments.</li>
+                            <li>Developed and maintained 3rd party integrations, including national utility APIs,
+                                e-signature systems, and authentication providers.</li>
+                            <li>Drafted, reviewed, and negotiated software-related contracts and technical
+                                specifications (şartnameler), ensuring legal and operational alignment.</li>
+                            <li>Established KPI tracking systems for software team performance, service request
+                                fulfillment, and system reliability metrics.</li>
+                            <li>Directed procurement procedures, vendor assessments, and contract management in
+                                accordance with public sector requirements.</li>
+                            <li>Coordinated cross-departmental collaboration between business units, IT support, and
+                                software developers to ensure efficient solution delivery.</li>
+                            <li>Promoted Agile methodologies, conducted sprint reviews, and managed backlogs through
+                                Jira and SharePoint–based workflows.</li>
+                            <li>Technologies Used: .NET Core, MSSQL, LDAP, Kubernetes, Helm, Argo CD, Bitnami Charts,
+                                NGINX Ingress, Docker, GitLab CI/CD, GitHub Actions, Git, Swagger, RESTful API,
+                                Keycloak, Kafka, Redis, Power BI, Qlik Sense, SonarQube, IIS, Azure DevOps (IaaS &
+                                Pipelines), Jenkins, Linux, Windows Server, PDFSharp, Bixolon, CPCL, Node.js, Outlook
+                                API, SMTP, Steganography, AES-256, ExcelJS, JavaScript, C#, Python, HTML/CSS, WhatsApp
+                                Cloud API, QR Code Libraries.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Engineering Manager | Huawei | Istanbul, Turkey | Jul 2022 – Jan 2025</h3>
+                        <p>Leading the development of large-scale projects, including employee engagement platforms and
+                            navigation services.</p>
+                        <ul>
+                            <li><strong>WeFocus SaaS Application</strong>: Developed a microservices-based employee
+                                engagement platform using Java, VueJS, MongoDB, PostgreSQL, Kubernetes, and Istio.
+                                Improved platform performance by 30%.</li>
+                            <li><strong>Petal Maps</strong>: Led the development of Petal Maps, a navigation app for
+                                HarmonyOS, Android, and iOS, using Spring Boot, MyBatis, Kafka, Hibernate, and Redis.
+                            </li>
+                            <li><strong>EBG (e.huawei.com) E-commerce B2B Multilingual Website Project</strong>: Led
+                                custom CMS development for Huawei’s B2B e-commerce platform, handling multilingual
+                                capabilities.</li>
                             <li>Additional Contributions:
                                 <ul>
                                     <li>Custom CMS development tailored for Huawei’s needs.</li>
-                                    <li>System engineering, requirement transfer, and problem-solving, including vendor management.</li>
-                                    <li>Created High-Level Design (HLD) documents to capture and document specific project requirements.</li>
+                                    <li>System engineering, requirement transfer, and problem-solving, including vendor
+                                        management.</li>
+                                    <li>Created High-Level Design (HLD) documents to capture and document specific
+                                        project requirements.</li>
                                 </ul>
                             </li>
-                            <li>Technologies Used: Spring Boot, Microservices, ElasticSearch, NLP, Restful, Kafka, Kubernetes, MySQL, MongoDB, Jenkins.</li>
+                            <li>Technologies Used: Spring Boot, Microservices, ElasticSearch, NLP, Restful, Kafka,
+                                Kubernetes, MySQL, MongoDB, Jenkins.</li>
                         </ul>
                     </li>
-            
+
                     <li>
                         <h3>Senior Product Manager | Turkcell Global Bilgi | Istanbul, Turkey | Jan 2022 – Jul 2022</h3>
-                        <p>Managed DevOps operations for critical applications and led chatbot development using robotic process automation (RPA).</p>
+                        <p>Managed DevOps operations for critical applications and led chatbot development using robotic
+                            process automation (RPA).</p>
                         <ul>
-                            <li><strong>Garanti BBA Banking Chatbot</strong>: Project management support, focusing on RPA coding and UI Path automation.</li>
-                            <li>Technologies Used: Jenkins, Java, RedHat, MacOS, Jira, RPA (UI Path), Agile Methodologies.</li>
+                            <li><strong>Garanti BBA Banking Chatbot</strong>: Project management support, focusing on
+                                RPA coding and UI Path automation.</li>
+                            <li>Technologies Used: Jenkins, Java, RedHat, MacOS, Jira, RPA (UI Path), Agile
+                                Methodologies.</li>
                         </ul>
                     </li>
-            
+
                     <li>
                         <h3>Technical Lead | PortalGrup | Istanbul, Turkey | Aug 2018 – Jan 2022</h3>
-                        <p>Led a team of 40+ members, including Frontend, Backend, and Mobile teams, working on high-traffic e-commerce platforms, mobile applications, and CMS development. Managed complex system integrations, payment systems, and marketplace connections while maintaining high code quality and adhering to SOLID principles.</p>
+                        <p>Led a team of 40+ members, including Frontend, Backend, and Mobile teams, working on
+                            high-traffic e-commerce platforms, mobile applications, and CMS development. Managed complex
+                            system integrations, payment systems, and marketplace connections while maintaining high
+                            code quality and adhering to SOLID principles.</p>
                         <ul>
-                            <li><strong>KoçAilem</strong>: Loyalty application for Koç Holding employees and families, with 200K+ users.</li>
-                            <li><strong>Fenerium E-Commerce Website</strong>: Developed an e-commerce platform for Fenerbahçe fans, focusing on personalized recommendations and payment integration.</li>
-                            <li><strong>Fenerbahçe Sports Club (fenerbahce.org)</strong>: Led the development of the official website for Fenerbahçe Sports Club, providing live updates, membership information, and ticketing integration.</li>
-                            <li><strong>Ford Turkey (ford.com.tr)</strong>: Managed the development of the official website for Ford Turkey, focusing on seamless navigation, car model display, and dealer locator functionality.</li>
-                            <li><strong>Divan Group E-Commerce Website</strong>: Created the e-commerce platform for Divan Hotels and Divan Pastaneleri.</li>
-                            <li><strong>E-DNA Android App</strong>: Developed E-DNA Android app for Eczacıbaşı, delivering educational content to healthcare professionals.</li>
-                            <li>Implemented infrastructure and application installations on Azure DevOps IaaS (Infrastructure as a Service), managing server configurations and deployments across environments.</li>
-                            <li>Migrated the entire system to Azure DevOps and built CI/CD pipelines for all environments (development, staging, production), ensuring automated deployments and continuous integration.</li>
-                            <li>Technologies Used: Azure DevOps, IaaS, Pipelines, Kentico, Azure DevOps, MSSQL, Java, ASP.NET MVC, CMS, Agile Methodologies.</li>
+                            <li><strong>KoçAilem</strong>: Loyalty application for Koç Holding employees and families,
+                                with 200K+ users.</li>
+                            <li><strong>Fenerium E-Commerce Website</strong>: Developed an e-commerce platform for
+                                Fenerbahçe fans, focusing on personalized recommendations and payment integration.</li>
+                            <li><strong>Fenerbahçe Sports Club (fenerbahce.org)</strong>: Led the development of the
+                                official website for Fenerbahçe Sports Club, providing live updates, membership
+                                information, and ticketing integration.</li>
+                            <li><strong>Ford Turkey (ford.com.tr)</strong>: Managed the development of the official
+                                website for Ford Turkey, focusing on seamless navigation, car model display, and dealer
+                                locator functionality.</li>
+                            <li><strong>Divan Group E-Commerce Website</strong>: Created the e-commerce platform for
+                                Divan Hotels and Divan Pastaneleri.</li>
+                            <li><strong>E-DNA Android App</strong>: Developed E-DNA Android app for Eczacıbaşı,
+                                delivering educational content to healthcare professionals.</li>
+                            <li>Implemented infrastructure and application installations on Azure DevOps IaaS
+                                (Infrastructure as a Service), managing server configurations and deployments across
+                                environments.</li>
+                            <li>Migrated the entire system to Azure DevOps and built CI/CD pipelines for all
+                                environments (development, staging, production), ensuring automated deployments and
+                                continuous integration.</li>
+                            <li>Technologies Used: Azure DevOps, IaaS, Pipelines, Kentico, Azure DevOps, MSSQL, Java,
+                                ASP.NET MVC, CMS, Agile Methodologies.</li>
                         </ul>
                     </li>
-                    
-                    
-            
+
+
+
                     <li>
                         <h3>Senior Android Developer | PortalGrup | Mar 2016 – Aug 2018</h3>
-                        <p>Developed Android applications for major clients like Bayer, focusing on event-based applications and gamification.</p>
+                        <p>Developed Android applications for major clients like Bayer, focusing on event-based
+                            applications and gamification.</p>
                         <ul>
-                            <li><strong>Zubizu QR Event App</strong>: Created a QR-based event application for seamless user experiences.</li>
-                            <li><strong>Bayer Cropscience App</strong>: Developed Android solutions for agriculture and environmental management.</li>
-                            <li><strong>E-DNA Android App</strong>: Delivered a comprehensive mobile platform for Eczacıbaşı, used in healthcare education.</li>
+                            <li><strong>Zubizu QR Event App</strong>: Created a QR-based event application for seamless
+                                user experiences.</li>
+                            <li><strong>Bayer Cropscience App</strong>: Developed Android solutions for agriculture and
+                                environmental management.</li>
+                            <li><strong>E-DNA Android App</strong>: Delivered a comprehensive mobile platform for
+                                Eczacıbaşı, used in healthcare education.</li>
                             <li>Technologies Used: Android Development, Java, Kotlin, Mobile App Development.</li>
                         </ul>
                     </li>
                 </ul>
             </div>
-            
-            
+
+
             <!-- Previous Experience Section -->
             <div class="previous-experience">
                 <h2>Previous Experience</h2>
                 <ul>
-                    <li><strong>IT Project Manager & Software Developer</strong> | Meryüz Bilişim | Dec 2014 – Feb 2016: Led full lifecycle software projects, including server and Android development.</li>
-                    <li><strong>Freelance Software Developer</strong> | Jul 2009 – Sep 2014: Developed backend and mobile systems using PHP, MySQL, and HTML/CSS.</li>
-                    <li><strong>Intern</strong> | INDEX Group | Aug 2013 – Sep 2013: Internship in IT department at Index Group.</li>
+                    <li><strong>IT Project Manager & Software Developer</strong> | Meryüz Bilişim | Dec 2014 – Feb 2016:
+                        Led full lifecycle software projects, including server and Android development.</li>
+                    <li><strong>Freelance Software Developer</strong> | Jul 2009 – Sep 2014: Developed backend and
+                        mobile systems using PHP, MySQL, and HTML/CSS.</li>
+                    <li><strong>Intern</strong> | INDEX Group | Aug 2013 – Sep 2013: Internship in IT department at
+                        Index Group.</li>
                 </ul>
             </div>
-            
+
             <style>
                 .description {
-                    font-size: 12px; /* Make the description smaller */
-                    color: #555; /* Grayish color for the description */
+                    font-size: 12px;
+                    /* Make the description smaller */
+                    color: #555;
+                    /* Grayish color for the description */
                 }
-            
+
                 .inline-link {
                     color: #D27A22;
                     text-decoration: none;
                 }
-            
+
                 .inline-link:hover {
                     text-decoration: underline;
                 }
             </style>
-            
+
 
             <div class="projects">
                 <h2>Projects</h2>
-            
-                <h3>WeFocus | Huawei | Jul 2022 – May 2023 
+
+                <h3>WeFocus | Huawei | Jul 2022 – May 2023
                     <span class="description">
-                        Developed a microservices-based employee engagement platform using Java, VueJS, MongoDB, PostgreSQL, Kubernetes, and Istio.
+                        Developed a microservices-based employee engagement platform using Java, VueJS, MongoDB,
+                        PostgreSQL, Kubernetes, and Istio.
                         <strong> | Project Link: </strong>
                         <a href="https://huawei.com" class="inline-link">WeFocus</a>
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: Kubernetes, Java, DevOps, Spring Boot, Product Lifecycle Management, People Management, Agile Methodologies.</li>
+                    <li>Skills Used: Kubernetes, Java, DevOps, Spring Boot, Product Lifecycle Management, People
+                        Management, Agile Methodologies.</li>
                 </ul>
-            
-                <h3>KoçAilem | PortalGrup | Nov 2018 – Dec 2021 
+
+                <h3>KoçAilem | PortalGrup | Nov 2018 – Dec 2021
                     <span class="description">
                         Loyalty application for Koç Holding employees and families, serving 200K users.
                         <strong> | Project Link: </strong>
@@ -631,10 +778,11 @@ ul li {
                 <ul>
                     <li>Skills Used: C#, DevOps, Kentico, Product Lifecycle Management, People Management.</li>
                 </ul>
-            
-                <h3>Fenerium E-Commerce Website 
+
+                <h3>Fenerium E-Commerce Website
                     <span class="description">
-                        Developed a robust e-commerce platform for Fenerbahçe S.K. fans, integrating payment systems and personalized recommendations.
+                        Developed a robust e-commerce platform for Fenerbahçe S.K. fans, integrating payment systems and
+                        personalized recommendations.
                         <strong> | Project Link: </strong>
                         <a href="https://fenerium.com" class="inline-link">Fenerium</a>
                     </span>
@@ -642,8 +790,8 @@ ul li {
                 <ul>
                     <li>Skills Used: .NET, E-Commerce, Kentico, Product Lifecycle Management, Marketing Automation.</li>
                 </ul>
-            
-                <h3>Avis Turkey E-Commerce Website 
+
+                <h3>Avis Turkey E-Commerce Website
                     <span class="description">
                         Developed an optimized e-commerce car rental website for Avis Turkey.
                         <strong> | Project Link: </strong>
@@ -653,8 +801,8 @@ ul li {
                 <ul>
                     <li>Skills Used: E-Commerce, CMS, .NET.</li>
                 </ul>
-            
-                <h3>Budget Turkey E-Commerce Website 
+
+                <h3>Budget Turkey E-Commerce Website
                     <span class="description">
                         Built the official e-commerce platform for Budget Turkey’s car rental service.
                         <strong> | Project Link: </strong>
@@ -664,8 +812,8 @@ ul li {
                 <ul>
                     <li>Skills Used: E-Commerce, CMS, .NET.</li>
                 </ul>
-            
-                <h3>Divan Group E-Commerce Website 
+
+                <h3>Divan Group E-Commerce Website
                     <span class="description">
                         Developed the official e-commerce platform for Divan Group.
                         <strong> | Project Link: </strong>
@@ -675,17 +823,18 @@ ul li {
                 <ul>
                     <li>Skills Used: E-Commerce, CMS, .NET.</li>
                 </ul>
-            
-                <h3>E-DNA Android App 
+
+                <h3>E-DNA Android App
                     <span class="description">
-                        Developed the E-DNA Android app for Eczacıbaşı, focused on delivering educational content and resources to healthcare professionals.
+                        Developed the E-DNA Android app for Eczacıbaşı, focused on delivering educational content and
+                        resources to healthcare professionals.
                     </span>
                 </h3>
                 <ul>
                     <li>Skills Used: Android Development, Java, Mobile App Design.</li>
                 </ul>
-            
-                <h3>ECZACIBAŞI İlaç Pazarlama Website 
+
+                <h3>ECZACIBAŞI İlaç Pazarlama Website
                     <span class="description">
                         Developed the official website for Eczacıbaşı İlaç Pazarlama.
                         <strong> | Project Link: </strong>
@@ -695,10 +844,11 @@ ul li {
                 <ul>
                     <li>Skills Used: .NET, Kentico, CMS.</li>
                 </ul>
-            
-                <h3>KoçDigital Website 
+
+                <h3>KoçDigital Website
                     <span class="description">
-                        Developed the official website for KoçDigital, an innovation-driven digital solutions company under Koç Holding.
+                        Developed the official website for KoçDigital, an innovation-driven digital solutions company
+                        under Koç Holding.
                         <strong> | Project Link: </strong>
                         <a href="https://kocdigital.com" class="inline-link">KoçDigital</a>
                     </span>
@@ -706,12 +856,12 @@ ul li {
                 <ul>
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
-            
-                
-            
-               
-            
-                <h3>KoçZer Website 
+
+
+
+
+
+                <h3>KoçZer Website
                     <span class="description">
                         Developed the KoçZer official website, part of the Koç Group services.
                         <strong> | Project Link: </strong>
@@ -721,10 +871,10 @@ ul li {
                 <ul>
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
-            
-                
-            
-                <h3>Imutor Website 
+
+
+
+                <h3>Imutor Website
                     <span class="description">
                         Developed the official website for Imutor, focusing on immune health solutions.
                         <strong> | Project Link: </strong>
@@ -734,8 +884,8 @@ ul li {
                 <ul>
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
-            
-                <h3>Tat Website 
+
+                <h3>Tat Website
                     <span class="description">
                         Developed the official website for Tat, a leading food production company in Turkey.
                         <strong> | Project Link: </strong>
@@ -745,8 +895,8 @@ ul li {
                 <ul>
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
-            
-                <h3>KTSK (Koç Community Sports Club) 
+
+                <h3>KTSK (Koç Community Sports Club)
                     <span class="description">
                         Developed the official website for KTSK, Koç Holding’s community sports club.
                         <strong> | Project Link: </strong>
@@ -756,23 +906,23 @@ ul li {
                 <ul>
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
-            
-                
-            
-                <h3>TurkTraktor Websites 
+
+
+
+                <h3>TurkTraktor Websites
                     <span class="description">
                         Developed the official websites for TurkTraktor, including brands New Holland and Case IH.
                         <strong> | Project Links: </strong>
-                        <a href="https://www.turktraktor.com.tr" class="inline-link">TurkTraktor</a>, 
-                        <a href="https://www.newholland.com.tr" class="inline-link">New Holland</a>, 
+                        <a href="https://www.turktraktor.com.tr" class="inline-link">TurkTraktor</a>,
+                        <a href="https://www.newholland.com.tr" class="inline-link">New Holland</a>,
                         <a href="https://www.caseih.com.tr" class="inline-link">Case IH</a>
                     </span>
                 </h3>
                 <ul>
                     <li>Skills Used: CMS, E-Commerce.</li>
                 </ul>
-            
-                <h3>Koç Corporate Website 
+
+                <h3>Koç Corporate Website
                     <span class="description">
                         Developed the official corporate website for Koç Holding.
                         <strong> | Project Link: </strong>
@@ -782,8 +932,8 @@ ul li {
                 <ul>
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
-            
-                <h3>Selfit E-Commerce Website 
+
+                <h3>Selfit E-Commerce Website
                     <span class="description">
                         Developed the official e-commerce platform for Selfit, focusing on sports and fitness products.
                         <strong> | Project Link: </strong>
@@ -793,8 +943,8 @@ ul li {
                 <ul>
                     <li>Skills Used: E-Commerce, .NET, CMS.</li>
                 </ul>
-            
-                <h3>Dynavit Website 
+
+                <h3>Dynavit Website
                     <span class="description">
                         Developed the official website for Dynavit, providing health and wellness products.
                         <strong> | Project Link: </strong>
@@ -804,10 +954,11 @@ ul li {
                 <ul>
                     <li>Skills Used: CMS, E-Commerce, .NET.</li>
                 </ul>
-            
-                <h3>Token E-Commerce Website 
+
+                <h3>Token E-Commerce Website
                     <span class="description">
-                        Developed the official e-commerce platform for Token Inc., providing financial technology solutions.
+                        Developed the official e-commerce platform for Token Inc., providing financial technology
+                        solutions.
                         <strong> | Project Link: </strong>
                         <a href="https://www.tokeninc.com" class="inline-link">Token</a>
                     </span>
@@ -816,9 +967,9 @@ ul li {
                     <li>Skills Used: E-Commerce, CMS, .NET.</li>
                 </ul>
             </div>
-            
-            
-            
+
+
+
 
         </div>
     </div>
