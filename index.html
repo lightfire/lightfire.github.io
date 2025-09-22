@@ -489,6 +489,22 @@
         .main-content ul {
             padding-left: 10px;
         }
+
+        .description {
+            font-size: 12px;
+            /* Make the description smaller */
+            color: #555;
+            /* Grayish color for the description */
+        }
+
+        .inline-link {
+            color: #D27A22;
+            text-decoration: none;
+        }
+
+        .inline-link:hover {
+            text-decoration: underline;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -533,14 +549,11 @@
                         <span><i class="fab fa-github"></i> github.com/lightfire</span></a></p>
             </div>
 
-
-
-
             <div class="sidebar-section">
                 <h2>Languages</h2>
-                <p>English: <span class="stars">★★★★★</span></p>
-                <p>Turkish: <span class="stars">★★★★★</span></p>
-                <p>German: <span class="stars">★★★☆☆</span></p>
+                <p>English: B2</p>
+                <p>German: Beginner</p>
+                <p>Turkish: Native</p>
             </div>
 
             <div class="sidebar-section skills">
@@ -598,15 +611,15 @@
             </div>
 
             <div class="sidebar-section">
-                <h2>Hobbies</h2>
-                <p>Driving</p>
-                <p>Cooking</p>
+                <h2>Awards</h2>
+                <p>Huawei Sparkling Star Award — Dec 2023</p>
             </div>
         </div>
 
         <!-- Main Content Area (Right) -->
         <div class="main-content">
             <h1>Kadir Ergun</h1>
+            <h2>Summary</h2>
             <p>Engineering Manager and Technical Lead with 10+ years of experience in software development and digital
                 transformation. Extensive background in building and managing 40+ member teams, delivering high-traffic
                 e-commerce and CMS platforms, and driving DevOps and CI/CD adoption. Strong focus on project and
@@ -627,26 +640,19 @@
                     <li>
                         <h3>Business Solutions Chief | İSPER A.Ş. (Istanbul Metropolitan Municipality Subsidiary) |
                             Istanbul, Turkey | Jan 2025 – Present</h3>
-                        <p>Leading digital transformation and enterprise solution strategies across municipal services.
-                            Managing ERP operations, DevOps practices, internal software development, KPI frameworks,
-                            and vendor coordination in alignment with strategic objectives.</p>
+                        <p>Directed municipal digital transformation, combining DevOps practices, application
+                            development, and KPI-driven governance to align IT solutions with strategic goals.</p>
                         <ul>
-                            <li><strong>DevOps &amp; Infrastructure:</strong> Implemented CI/CD, Infrastructure as Code,
-                                and Kubernetes-based microservices with Azure DevOps, improving deployment efficiency
-                                and system reliability.</li>
-                            <li><strong>Application Development:</strong> Oversaw .NET Core applications with MSSQL and
-                                LDAP; built scalable internal APIs and 3rd-party integrations (utility APIs,
-                                e-signature, authentication).</li>
-                            <li><strong>Business Intelligence &amp; Reporting:</strong> Designed Power BI dashboards for
-                                operational and financial reporting, enabling real-time decision-making.</li>
-                            <li><strong>Governance &amp; Compliance:</strong> Drafted technical specifications and
-                                contracts, led procurement and vendor assessments, and established KPI frameworks for
-                                performance tracking and system reliability.</li>
-                            <li><strong>Team &amp; Process Leadership:</strong> Promoted Agile practices, managed sprint
-                                reviews and backlogs (Jira/SharePoint), and coordinated cross-department collaboration
-                                for efficient delivery.</li>
+                            <li><strong>DevOps & Infrastructure:</strong> Introduced CI/CD, IaC, and Kubernetes
+                                microservices via Azure DevOps, cutting deployment time and improving reliability.</li>
+                            <li><strong>Applications & Integrations:</strong> Oversaw .NET Core solutions with
+                                MSSQL/LDAP and delivered scalable APIs plus integrations (utilities, e-signature,
+                                authentication).</li>
+                            <li><strong>Data & Reporting:</strong> Built Power BI dashboards for operational/financial
+                                KPIs, enabling real-time decision-making.</li>
+                            <li><strong>Governance & Leadership:</strong> Managed vendors, contracts, and procurement;
+                                applied Agile practices and KPI frameworks to boost team delivery.</li>
                         </ul>
-
                     </li>
                     <li>
                         <h3>Engineering Manager | Huawei | Istanbul, Turkey | Jul 2022 – Jan 2025</h3>
@@ -742,23 +748,7 @@
                 </ul>
             </div>
 
-            <style>
-                .description {
-                    font-size: 12px;
-                    /* Make the description smaller */
-                    color: #555;
-                    /* Grayish color for the description */
-                }
 
-                .inline-link {
-                    color: #D27A22;
-                    text-decoration: none;
-                }
-
-                .inline-link:hover {
-                    text-decoration: underline;
-                }
-            </style>
 
 
             <div class="projects">
@@ -766,20 +756,20 @@
 
                 <h3>WeFocus | Huawei | Jul 2022 – May 2023
                     <span class="description">
-                        Developed a microservices-based employee engagement platform using Java, VueJS, MongoDB,
-                        PostgreSQL, Kubernetes, and Istio.
+                        Built a scalable employee engagement SaaS leveraging Java microservices, VueJS, PostgreSQL,
+                        Kubernetes, and Istio.
                         <strong> | Project Link: </strong>
                         <a href="https://huawei.com" class="inline-link">WeFocus</a>
                     </span>
                 </h3>
                 <ul>
                     <li>Skills Used: Kubernetes, Java, DevOps, Spring Boot, Product Lifecycle Management, People
-                        Management, Agile Methodologies.</li>
+                        Management, Agile.</li>
                 </ul>
 
                 <h3>KoçAilem | PortalGrup | Nov 2018 – Dec 2021
                     <span class="description">
-                        Loyalty application for Koç Holding employees and families, serving 200K users.
+                        Loyalty app for Koç Holding employees and families, reaching 200K+ active users.
                         <strong> | Project Link: </strong>
                         <a href="https://kocailem.com" class="inline-link">KoçAilem</a>
                     </span>
@@ -788,76 +778,74 @@
                     <li>Skills Used: C#, DevOps, Kentico, Product Lifecycle Management, People Management.</li>
                 </ul>
 
-                <h3>Fenerium E-Commerce Website
+                <h3>Fenerium E-Commerce
                     <span class="description">
-                        Developed a robust e-commerce platform for Fenerbahçe S.K. fans, integrating payment systems and
-                        personalized recommendations.
+                        Delivered an online store for Fenerbahçe S.K. with integrated payments and recommendation
+                        engine.
                         <strong> | Project Link: </strong>
                         <a href="https://fenerium.com" class="inline-link">Fenerium</a>
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: .NET, E-Commerce, Kentico, Product Lifecycle Management, Marketing Automation.</li>
+                    <li>Skills Used: .NET, E-Commerce, Kentico, Marketing Automation.</li>
                 </ul>
 
-                <h3>Avis Turkey E-Commerce Website
+                <h3>Avis Turkey E-Commerce
                     <span class="description">
-                        Developed an optimized e-commerce car rental website for Avis Turkey.
+                        Implemented digital car rental platform optimized for performance and usability.
                         <strong> | Project Link: </strong>
                         <a href="https://avis.com.tr" class="inline-link">Avis Turkey</a>
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: E-Commerce, CMS, .NET, People Management.</li>
+                    <li>Skills Used: E-Commerce, CMS, .NET, Team Leadership.</li>
                 </ul>
 
-                <h3>Budget Turkey E-Commerce Website
+                <h3>Budget Turkey
                     <span class="description">
-                        Built the official e-commerce platform for Budget Turkey’s car rental service.
+                        Launched B2C e-commerce channel for Budget car rentals.
                         <strong> | Project Link: </strong>
                         <a href="https://budget.com.tr" class="inline-link">Budget Turkey</a>
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: E-Commerce, CMS, .NET, People Management.</li>
+                    <li>Skills Used: E-Commerce, CMS, .NET.</li>
                 </ul>
 
-                <h3>Divan Group E-Commerce Website
+                <h3>Divan Group
                     <span class="description">
-                        Developed the official e-commerce platform for Divan Group.
+                        Engineered e-commerce solution for Divan Hotels & retail products.
                         <strong> | Project Link: </strong>
                         <a href="https://divan.com.tr" class="inline-link">Divan Hotels</a>
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: E-Commerce, CMS, .NET, People Management.</li>
+                    <li>Skills Used: E-Commerce, CMS, .NET.</li>
                 </ul>
 
                 <h3>E-DNA Android App
                     <span class="description">
-                        Developed the E-DNA Android app for Eczacıbaşı, focused on delivering educational content and
-                        resources to healthcare professionals.
+                        Created a mobile education app for Eczacıbaşı, targeting healthcare professionals.
                     </span>
                 </h3>
                 <ul>
                     <li>Skills Used: Android Development, Java, Mobile App Design.</li>
                 </ul>
 
-                <h3>ECZACIBAŞI İlaç Pazarlama Website
+                <h3>Eczacıbaşı İlaç Pazarlama
                     <span class="description">
-                        Developed the official website for Eczacıbaşı İlaç Pazarlama.
+                        Built CMS-driven corporate website for pharmaceutical marketing division.
                         <strong> | Project Link: </strong>
                         <a href="https://eczacibasiilac.com.tr" class="inline-link">Eczacıbaşı İlaç</a>
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: .NET, Kentico, CMS, People Management.</li>
+                    <li>Skills Used: .NET, Kentico, CMS.</li>
                 </ul>
 
-                <h3>KoçDigital Website
+                <h3>KoçDigital
                     <span class="description">
-                        Developed the official website for KoçDigital, an innovation-driven digital solutions company
-                        under Koç Holding.
+                        Delivered web presence for KoçDigital, highlighting innovation-driven solutions.
                         <strong> | Project Link: </strong>
                         <a href="https://kocdigital.com" class="inline-link">KoçDigital</a>
                     </span>
@@ -866,13 +854,9 @@
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
 
-
-
-
-
-                <h3>KoçZer Website
+                <h3>KoçZer
                     <span class="description">
-                        Developed the KoçZer official website, part of the Koç Group services.
+                        Created corporate website for KoçZer services division.
                         <strong> | Project Link: </strong>
                         <a href="https://koczer.com" class="inline-link">KoçZer</a>
                     </span>
@@ -881,11 +865,9 @@
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
 
-
-
-                <h3>Imutor Website
+                <h3>Imutor
                     <span class="description">
-                        Developed the official website for Imutor, focusing on immune health solutions.
+                        Implemented brand website for Imutor immune health products.
                         <strong> | Project Link: </strong>
                         <a href="https://www.imutor.com.tr" class="inline-link">Imutor</a>
                     </span>
@@ -894,9 +876,9 @@
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
 
-                <h3>Tat Website
+                <h3>Tat
                     <span class="description">
-                        Developed the official website for Tat, a leading food production company in Turkey.
+                        Revamped online presence for Tat food production company.
                         <strong> | Project Link: </strong>
                         <a href="https://www.tat.com.tr" class="inline-link">Tat</a>
                     </span>
@@ -907,7 +889,7 @@
 
                 <h3>KTSK (Koç Community Sports Club)
                     <span class="description">
-                        Developed the official website for KTSK, Koç Holding’s community sports club.
+                        Built sports club website for Koç Holding’s community initiatives.
                         <strong> | Project Link: </strong>
                         <a href="https://www.ktsk.com.tr" class="inline-link">KTSK</a>
                     </span>
@@ -916,11 +898,9 @@
                     <li>Skills Used: CMS, .NET.</li>
                 </ul>
 
-
-
-                <h3>TurkTraktor Websites
+                <h3>TurkTraktor
                     <span class="description">
-                        Developed the official websites for TurkTraktor, including brands New Holland and Case IH.
+                        Delivered multiple brand sites (New Holland, Case IH) under TurkTraktor umbrella.
                         <strong> | Project Links: </strong>
                         <a href="https://www.turktraktor.com.tr" class="inline-link">TurkTraktor</a>,
                         <a href="https://www.newholland.com.tr" class="inline-link">New Holland</a>,
@@ -928,23 +908,23 @@
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: CMS, E-Commerce, People Management.</li>
+                    <li>Skills Used: CMS, E-Commerce.</li>
                 </ul>
 
-                <h3>Koç Corporate Website
+                <h3>Koç Corporate
                     <span class="description">
-                        Developed the official corporate website for Koç Holding.
+                        Created Koç Holding corporate site to unify digital identity.
                         <strong> | Project Link: </strong>
                         <a href="https://www.koc.com.tr" class="inline-link">Koç Corporate</a>
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: CMS, .NET, People Management.</li>
+                    <li>Skills Used: CMS, .NET.</li>
                 </ul>
 
-                <h3>Selfit E-Commerce Website
+                <h3>Selfit
                     <span class="description">
-                        Developed the official e-commerce platform for Selfit, focusing on sports and fitness products.
+                        Designed e-commerce channel for sports & fitness products.
                         <strong> | Project Link: </strong>
                         <a href="https://www.selfit.com.tr" class="inline-link">Selfit</a>
                     </span>
@@ -953,9 +933,9 @@
                     <li>Skills Used: E-Commerce, .NET, CMS.</li>
                 </ul>
 
-                <h3>Dynavit Website
+                <h3>Dynavit
                     <span class="description">
-                        Developed the official website for Dynavit, providing health and wellness products.
+                        Implemented website for Dynavit health & wellness products.
                         <strong> | Project Link: </strong>
                         <a href="https://www.dynavit.com.tr" class="inline-link">Dynavit</a>
                     </span>
@@ -964,18 +944,18 @@
                     <li>Skills Used: CMS, E-Commerce, .NET.</li>
                 </ul>
 
-                <h3>Token E-Commerce Website
+                <h3>Token
                     <span class="description">
-                        Developed the official e-commerce platform for Token Inc., providing financial technology
-                        solutions.
+                        Delivered fintech e-commerce solution for Token Inc.
                         <strong> | Project Link: </strong>
                         <a href="https://www.tokeninc.com" class="inline-link">Token</a>
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: E-Commerce, CMS, .NET, People Management.</li>
+                    <li>Skills Used: E-Commerce, CMS, .NET.</li>
                 </ul>
             </div>
+
 
 
 
