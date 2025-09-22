@@ -12,126 +12,87 @@
             line-height: 1.5;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
         }
 
+        /* Anchor links styling */
         a {
             color: #D27A22;
             text-decoration: none;
         }
 
         a:hover {
-            color: #FF9900;
             text-decoration: underline;
+            color: #FF9900;
         }
 
+        /* Unordered list styling */
         ul {
-            list-style: disc;
-            margin: 0 0 10px 20px;
-            padding: 0;
+            list-style-type: disc;
+            margin-left: 20px;
         }
 
         ul li {
             margin-bottom: 10px;
         }
 
+        /* Image box-shadow for profile picture */
         .image-placeholder img {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* Container for main content */
         .container {
             width: 900px;
             margin: 20px auto;
-            padding: 20px;
             display: flex;
             justify-content: space-between;
             background-color: #fff;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
+        /* Left Sidebar */
         .sidebar {
             width: 30%;
             background-color: #355070;
             padding: 20px;
-            color: #fff;
+            color: white;
         }
 
+        /* Sidebar Headers */
         .sidebar h2 {
+            color: #fff;
             font-size: 18px;
             margin-bottom: 15px;
             text-transform: uppercase;
         }
 
+        /* General Sidebar Paragraph Styling */
         .sidebar p {
             margin-bottom: 10px;
         }
 
+        /* Sidebar Section Styling */
         .sidebar-section {
             margin-bottom: 30px;
-        }
-
-        .sidebar-section span,
-        .sidebar-section p {
-            display: flex;
-            align-items: center;
         }
 
         .sidebar-section p {
             margin: 5px 0;
         }
 
-        .sidebar-section i {
+        /* Personal Details Icons */
+        .icon {
             margin-right: 10px;
-            font-size: 18px;
-        }
-
-        .sidebar-section a {
-            display: inline-block;
-            margin-bottom: 10px;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .sidebar-section a:hover {
-            color: #ddd;
-            text-decoration: underline;
-        }
-
-        .sidebar-section a i {
-            margin-right: 15px;
-        }
-
-        .stars {
-            display: inline-block;
-            color: #000;
             font-size: 16px;
         }
 
-        .skills ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .skills ul li {
-            position: relative;
-            padding-left: 15px;
-            margin-bottom: 8px;
-        }
-
-        .skills ul li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #D27A22;
-        }
-
+        /* Main Content Area */
         .main-content {
             width: 70%;
-            padding: 20px 20px 20px 30px;
+            padding: 20px;
         }
 
+        /* Main Content Headings */
         .main-content h1 {
             font-size: 36px;
             color: #D27A22;
@@ -139,68 +100,163 @@
 
         .main-content h2 {
             font-size: 18px;
-            background-color: #355070;
             color: #ffffff;
+            background-color: #355070;
             padding: 5px 10px;
             text-transform: uppercase;
             margin-bottom: 15px;
         }
 
+        /* Work Experience and Education Styling */
         .main-content h3 {
-            margin-top: 10px;
-            padding: 5px 5px 5px 9px;
             background-color: #f0f0f0;
-            border-left: 4px solid #D27A22;
-            color: #333;
+            padding: 5px;
             font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+            border-left: 4px solid #D27A22;
         }
 
-        .main-content p,
-        .main-content ul {
+        /* General Paragraph Styling */
+        .main-content p {
             margin-bottom: 10px;
         }
 
-        .main-content ul {
-            padding-left: 10px;
-        }
-
+        /* Section Margins */
         .work-experience,
         .education,
-        .projects,
-        .previous-experience {
+        .skills,
+        .projects {
             margin-bottom: 20px;
         }
 
+        .main-content ul {
+            margin-left: 20px;
+        }
+
+        /* Language section with stars */
+        .stars {
+            display: inline-block;
+        }
+
+        .stars span {
+            color: #000;
+            font-size: 16px;
+        }
+
+        /* Footer styles */
+        .footer {
+            font-size: 12px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        /* Skills and Experience sections with square bullet points */
+        .skills ul,
         .previous-experience ul {
-            list-style: square;
+            list-style-type: square;
+            margin-left: 20px;
         }
 
-        .projects {
-            margin-bottom: 15px;
+        /* Sidebar Icons and Links */
+        .sidebar-section a i {
+            font-size: 18px;
+            margin-right: 15px;
         }
 
+        /* Sidebar Links and Spacing */
+        .sidebar-section a {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Flexbox for Aligning Icons and Text */
+        .sidebar-section p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        /* Sidebar Icon Sizing */
+        .sidebar-section i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Sidebar Hover Effect */
+        .sidebar-section p a:hover {
+            color: #ddd;
+        }
+
+        /* Flexbox for Icon Alignment */
+        .sidebar-section span {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Projects Section */
         .projects h3 {
-            display: inline;
-            font-size: 12px;
-            font-weight: bold;
-            margin: 5px 0;
+            font-size: 14px;
+            /* Smaller font size for project titles */
             color: #333;
-        }
-
-        .projects span.description {
-            font-size: 12px;
-            color: #777;
-            margin-left: 10px;
+            margin-top: 5px;
+            /* Reduced margin */
+            margin-bottom: 5px;
+            font-weight: bold;
         }
 
         .projects p {
             font-size: 12px;
+            /* Smaller font size for descriptions */
             margin-bottom: 5px;
+            /* Reduced space between paragraphs */
             color: #555;
         }
 
         .projects ul {
-            margin: 5px 0 5px 15px;
+            margin-left: 15px;
+            /* Smaller left margin */
+            margin-bottom: 5px;
+            /* Less space between list items */
+        }
+
+        .projects li {
+            font-size: 12px;
+            /* Smaller font size for list items */
+            margin-bottom: 3px;
+            /* Reduced space between list items */
+        }
+
+        .projects {
+            margin-bottom: 15px;
+            /* Reduced bottom margin */
+        }
+
+        /* Projects Section */
+        .projects h3 {
+            font-size: 12px;
+            /* Smaller font size for project titles */
+            color: #333;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            display: inline;
+            /* Display title and description inline */
+        }
+
+        .projects span.description {
+            font-size: 12px;
+            /* Smaller font for descriptions */
+            color: #777;
+            /* Lighter color for description */
+            margin-left: 10px;
+            /* Space between title and description */
+        }
+
+        .projects ul {
+            margin: 0;
         }
 
         .projects li {
@@ -208,41 +264,61 @@
             margin-bottom: 3px;
         }
 
+        /* Sidebar Skills Section */
+        .skills ul {
+            list-style-type: none;
+            /* Remove default list style */
+            padding-left: 0;
+            /* Remove left padding */
+            padding-top: 0;
+        }
+
+        .skills ul li {
+            margin-left: 0;
+            /* Remove left margin */
+            padding-left: 10px;
+            /* Add some padding to align neatly */
+            text-indent: -10px;
+            /* Adjust the text indent for better alignment */
+            position: relative;
+        }
+
+        .skills ul li:before {
+            content: "•";
+            /* Use bullet point */
+            color: #D27A22;
+            /* Change bullet point color */
+            position: absolute;
+            left: 0;
+            /* Align bullet point closer to the text */
+            top: 0;
+        }
+
         .project-link {
             font-size: 12px;
+            /* Make the project link smaller */
             margin-bottom: 10px;
         }
 
         .project-link a {
             color: #D27A22;
+            text-decoration: none;
         }
 
         .project-link a:hover {
             text-decoration: underline;
         }
 
-        .description {
-            font-size: 12px;
-            color: #555;
-        }
 
-        .inline-link {
-            color: #D27A22;
-        }
 
-        .inline-link:hover {
-            text-decoration: underline;
-        }
 
-        .footer {
-            font-size: 12px;
-            color: #555;
-            margin-top: 20px;
-        }
 
+        /* Styles specific for print */
         @media print {
             body {
-                background-color: #fff;
+                margin: 0;
+                padding: 0;
+                background-color: white;
             }
 
             .container {
@@ -250,18 +326,17 @@
                 margin: 0;
                 padding: 0;
                 box-shadow: none;
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
             }
 
+            /* Force background colors and keep color styles */
             * {
                 -webkit-print-color-adjust: exact;
+                /* For Chrome/Safari */
                 color-adjust: exact;
+                /* For Firefox */
             }
 
+            /* Make only the container visible for printing */
             body * {
                 visibility: hidden;
             }
@@ -270,9 +345,151 @@
             .container * {
                 visibility: visible;
             }
+
+            /* Disable margins around the content */
+            .container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        /* Sidebar and other element colors */
+        .sidebar {
+            background-color: #355070;
+            /* Keep sidebar color for print */
+            color: white;
+        }
+
+        .main-content h1,
+        .main-content h2,
+        .main-content h3 {
+            color: #D27A22;
+        }
+
+        .main-content h2 {
+            background-color: #355070;
+            /* Ensure h2 background stays visible */
+            color: #ffffff;
+        }
+
+
+
+        /* General styles for normal screen display */
+        @media screen {
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #f8f8f8;
+            }
+
+            .container {
+                width: 900px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Styles specific for print */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            /* Force background colors and keep color styles */
+            * {
+                -webkit-print-color-adjust: exact;
+                /* For Chrome/Safari */
+                color-adjust: exact;
+                /* For Firefox */
+            }
+
+            /* Make only the container visible for printing */
+            body * {
+                visibility: hidden;
+            }
+
+            .container,
+            .container * {
+                visibility: visible;
+            }
+
+            /* Disable margins around the content */
+            .container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        /* Sidebar and other element colors */
+        .sidebar {
+            background-color: #355070;
+            /* Keep sidebar color for print */
+            color: white;
+        }
+
+        .main-content h1,
+        .main-content h2,
+        .main-content h3 {
+            color: #D27A22;
+        }
+
+        .main-content h2 {
+            background-color: #355070;
+            /* Ensure h2 background stays visible */
+            color: #ffffff;
+        }
+
+        /* Adjust main content padding for alignment */
+        .main-content {
+            padding-left: 30px;
+            /* Adjust this padding to center content better */
+        }
+
+        /* Work experience adjustments */
+        .work-experience h3,
+        .work-experience p,
+        .work-experience ul {
+            padding-left: 10px;
+            /* Adjust this padding to bring it to the right */
+            margin-left: 0;
+            /* Reset margin to avoid extra left shift */
+        }
+
+        /* Skills adjustments to reduce spacing */
+        .skills ul li {
+            padding-left: 10px;
+            /* Slightly move to the right */
+            margin-left: 0;
+            /* Reset to align properly */
+        }
+
+        /* Ensure consistent padding inside main content */
+        .main-content p,
+        .main-content ul {
+            padding-left: 10px;
         }
     </style>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
@@ -351,6 +568,36 @@
             </div>
 
             <div class="sidebar-section">
+                <h2>Certificates</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/learning/certificates/94738cd4fa6a80739a92a7045fe6731467460a8b2dfe4132175b307835c0d168?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BYBhhd%2FtVQgizj%2BzRiD8AkA%3D%3D"
+                            target="_blank">
+                            Atlassian Agile Project Management Professional Certificate — Atlassian (Nov 2024)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/learning/certificates/33f63049d3fecbdaad122678885e68e5a289b761095c6d295844405c0f9d7490?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BYBhhd%2FtVQgizj%2BzRiD8AkA%3D%3D"
+                            target="_blank">
+                            Agile Project Management with Jira Cloud: 3 Advanced Topics — LinkedIn (Nov 2024)
+                        </a>
+                    </li>
+
+                    <li>Agile Foundations — LinkedIn (Oct 2024)</li>
+                    <li>Scrum: The Basics — LinkedIn (Oct 2024)</li>
+                    <li>
+                        <a href="https://www.linkedin.com/learning/certificates/9ef6d41e5cce7a6e3a1c63483aae75acd11cfb7c039bff92e40f0824cbe268e7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BzjqXUlqFR7%2BIantYE3g2aw%3D%3D"
+                            target="_blank">
+                            AI for Managers — Microsoft & LinkedIn (Oct 2024)
+                        </a>
+                    </li>
+                    <li>Become an AI-Powered Manager — LinkedIn (Oct 2024)</li>
+                    <li>Building a Collaborative Team Culture with AI — LinkedIn (Oct 2024)</li>
+                    <li>Kentico Certified Developer for Kentico 12 — Kentico (May 2019)</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
                 <h2>Hobbies</h2>
                 <p>Driving</p>
                 <p>Cooking</p>
@@ -360,8 +607,11 @@
         <!-- Main Content Area (Right) -->
         <div class="main-content">
             <h1>Kadir Ergun</h1>
-            <p>Engineering Manager and Technical Lead with over 10 years of experience in software development, team
-                leadership, and technical project management across various industries.</p>
+            <p>Engineering Manager and Technical Lead with 10+ years of experience in software development and digital
+                transformation. Extensive background in building and managing 40+ member teams, delivering high-traffic
+                e-commerce and CMS platforms, and driving DevOps and CI/CD adoption. Strong focus on project and
+                performance management, vendor coordination, and Agile practices. Recognized for strategic thinking and
+                problem-solving ability, ensuring scalability, security, and measurable business impact.</p>
 
             <div class="education">
                 <h2>Education</h2>
@@ -381,55 +631,22 @@
                             Managing ERP operations, DevOps practices, internal software development, KPI frameworks,
                             and vendor coordination in alignment with strategic objectives.</p>
                         <ul>
-                            <li>Developed and fine-tuned an organization-specific Large Language Model (LLM) called
-                                <strong>ISPER-LLM</strong> tailored for internal use cases such as email summarization,
-                                policy interpretation, and knowledge retrieval from structured and unstructured
-                                corporate data.
-                            </li>
-                            <li>Designed and deployed AI-powered assistants using Retrieval-Augmented Generation (RAG)
-                                architecture to extract contextual insights from Outlook-based correspondence and
-                                internal documentation.</li>
-                            <li>Enabled automated suggestion and summarization systems integrated with institutional
-                                knowledge bases, increasing employee efficiency and response accuracy.</li>
-                            <li>Built training pipelines and prompt engineering workflows to align the model’s outputs
-                                with domain-specific language and regulations.</li>
-                            <li>Implemented a comprehensive DevOps strategy, including CI/CD pipelines, infrastructure
-                                as code (IaC), and container orchestration using Kubernetes, enhancing deployment
-                                efficiency and system reliability.</li>
-                            <li>Led the end-to-end implementation and customization of Logo ERP, including J-HR and
-                                J-Platform modules, integrating with municipal operations.</li>
-                            <li>Oversaw internal development teams in delivering .NET Core–based applications integrated
-                                with MSSQL and LDAP authentication mechanisms.</li>
-                            <li>Planned and deployed Kubernetes-based microservices for internal APIs, enhancing
-                                scalability and resilience across systems.</li>
-                            <li>Managed CI/CD pipelines and DevOps environments using Azure DevOps, facilitating
-                                automatic deployments across staging and production environments.</li>
-                            <li>Designed and implemented Power BI dashboards for operational and financial reporting,
-                                enabling real-time decision-making across departments.</li>
-                            <li>Developed and maintained 3rd party integrations, including national utility APIs,
-                                e-signature systems, and authentication providers.</li>
-                            <li>Drafted, reviewed, and negotiated software-related contracts and technical
-                                specifications (şartnameler), ensuring legal and operational alignment.</li>
-                            <li>Established KPI tracking systems for software team performance, service request
-                                fulfillment, and system reliability metrics.</li>
-                            <li>Directed procurement procedures, vendor assessments, and contract management in
-                                accordance with public sector requirements.</li>
-                            <li>Coordinated cross-departmental collaboration between business units, IT support, and
-                                software developers to ensure efficient solution delivery.</li>
-                            <li>Promoted Agile methodologies, conducted sprint reviews, and managed backlogs through
-                                Jira and SharePoint–based workflows.</li>
-                            <li>Technologies Used:
-                                .NET Core, MSSQL, LDAP, Kubernetes, Helm, Argo CD, Bitnami Charts, NGINX Ingress,
-                                Docker, GitLab CI/CD, GitHub Actions, Git, Swagger, RESTful API, Keycloak, Kafka, Redis,
-                                Power BI, Qlik Sense, SonarQube, IIS, Azure DevOps (IaaS & Pipelines), Jenkins, Linux,
-                                Windows Server, PDFSharp, Bixolon, CPCL, Node.js, Outlook API, SMTP, Steganography,
-                                AES-256, ExcelJS, JavaScript, C#, Python, HTML/CSS, WhatsApp Cloud API, QR Code
-                                Libraries,
-                                OpenAI API, Azure OpenAI, Hugging Face Transformers, LangChain, Pinecone, FAISS,
-                                FastAPI, Streamlit
-                            </li>
-
+                            <li><strong>DevOps &amp; Infrastructure:</strong> Implemented CI/CD, Infrastructure as Code,
+                                and Kubernetes-based microservices with Azure DevOps, improving deployment efficiency
+                                and system reliability.</li>
+                            <li><strong>Application Development:</strong> Oversaw .NET Core applications with MSSQL and
+                                LDAP; built scalable internal APIs and 3rd-party integrations (utility APIs,
+                                e-signature, authentication).</li>
+                            <li><strong>Business Intelligence &amp; Reporting:</strong> Designed Power BI dashboards for
+                                operational and financial reporting, enabling real-time decision-making.</li>
+                            <li><strong>Governance &amp; Compliance:</strong> Drafted technical specifications and
+                                contracts, led procurement and vendor assessments, and established KPI frameworks for
+                                performance tracking and system reliability.</li>
+                            <li><strong>Team &amp; Process Leadership:</strong> Promoted Agile practices, managed sprint
+                                reviews and backlogs (Jira/SharePoint), and coordinated cross-department collaboration
+                                for efficient delivery.</li>
                         </ul>
+
                     </li>
                     <li>
                         <h3>Engineering Manager | Huawei | Istanbul, Turkey | Jul 2022 – Jan 2025</h3>
@@ -478,7 +695,7 @@
                             system integrations, payment systems, and marketplace connections while maintaining high
                             code quality and adhering to SOLID principles.</p>
                         <ul>
-                            
+
                             <li><strong>E-DNA Android App</strong>: Developed E-DNA Android app for Eczacıbaşı,
                                 delivering educational content to healthcare professionals.</li>
                             <li>Implemented infrastructure and application installations on Azure DevOps IaaS
@@ -524,6 +741,25 @@
                         Index Group.</li>
                 </ul>
             </div>
+
+            <style>
+                .description {
+                    font-size: 12px;
+                    /* Make the description smaller */
+                    color: #555;
+                    /* Grayish color for the description */
+                }
+
+                .inline-link {
+                    color: #D27A22;
+                    text-decoration: none;
+                }
+
+                .inline-link:hover {
+                    text-decoration: underline;
+                }
+            </style>
+
 
             <div class="projects">
                 <h2>Projects</h2>
@@ -572,7 +808,7 @@
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: E-Commerce, CMS, .NET.</li>
+                    <li>Skills Used: E-Commerce, CMS, .NET, People Management.</li>
                 </ul>
 
                 <h3>Budget Turkey E-Commerce Website
@@ -583,7 +819,7 @@
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: E-Commerce, CMS, .NET.</li>
+                    <li>Skills Used: E-Commerce, CMS, .NET, People Management.</li>
                 </ul>
 
                 <h3>Divan Group E-Commerce Website
@@ -594,7 +830,7 @@
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: E-Commerce, CMS, .NET.</li>
+                    <li>Skills Used: E-Commerce, CMS, .NET, People Management.</li>
                 </ul>
 
                 <h3>E-DNA Android App
@@ -615,7 +851,7 @@
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: .NET, Kentico, CMS.</li>
+                    <li>Skills Used: .NET, Kentico, CMS, People Management.</li>
                 </ul>
 
                 <h3>KoçDigital Website
@@ -692,7 +928,7 @@
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: CMS, E-Commerce.</li>
+                    <li>Skills Used: CMS, E-Commerce, People Management.</li>
                 </ul>
 
                 <h3>Koç Corporate Website
@@ -703,7 +939,7 @@
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: CMS, .NET.</li>
+                    <li>Skills Used: CMS, .NET, People Management.</li>
                 </ul>
 
                 <h3>Selfit E-Commerce Website
@@ -737,7 +973,7 @@
                     </span>
                 </h3>
                 <ul>
-                    <li>Skills Used: E-Commerce, CMS, .NET.</li>
+                    <li>Skills Used: E-Commerce, CMS, .NET, People Management.</li>
                 </ul>
             </div>
 
