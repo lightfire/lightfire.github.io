@@ -1,0 +1,31 @@
+@include print-only {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: $light-bg;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    position: absolute;
+    inset: 0;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .container,
+  .container * {
+    visibility: visible;
+  }
+}
+

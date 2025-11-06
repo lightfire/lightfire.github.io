@@ -1,0 +1,13 @@
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-bold   { font-weight: bold; }
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-color;
+    text-decoration: underline;
+  }
+}

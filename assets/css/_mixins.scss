@@ -1,0 +1,15 @@
+@mixin box-shadow($blur: 15px, $color: rgba(0,0,0,0.1)) {
+  box-shadow: 0 0 $blur $color;
+}
+
+@mixin section-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+@mixin print-only {
+  @media print {
+    @content;
+  }
+}

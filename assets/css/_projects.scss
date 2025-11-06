@@ -1,0 +1,35 @@
+.projects-page {
+  background: #fff;
+  padding: 20mm 15mm;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  font-size: 12px;
+
+  .header {
+    text-align: center;
+    margin-bottom: 10mm;
+
+    h1 { font-size: 28px; color: $primary-color; }
+    h2 { margin-top: 10mm; font-size: 16px; color: $dark-color; }
+  }
+
+  article { margin-bottom: 6mm; }
+
+  .project-item {
+    margin-bottom: 8mm;
+    h3 { font-size: 14px; color: $dark-color; margin-bottom: 2mm; }
+    p { margin: 0; line-height: 1.4; }
+  }
+
+  ul { margin-left: 15px; font-size: 12px; }
+
+  .footer {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10mm;
+    color: #666;
+  }
+}
+
+

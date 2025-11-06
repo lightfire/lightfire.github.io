@@ -1,0 +1,25 @@
+.sidebar {
+  width: 30%;
+  background-color: $light-bg;
+  color: $dark-color;
+  padding: 20px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  height: auto;
+
+  h2 {
+    @include section-title;
+    color: $dark-color;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li::before {
+      content: "•";
+      color: $primary-color;
+      margin-right: 6px;
+    }
+  }
+}
