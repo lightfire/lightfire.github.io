@@ -1,0 +1,40 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: "Quick notes on engineering leadership, technology strategy, and product development."
+---
+
+<section class="blog-hero">
+  <p class="eyebrow">Blog</p>
+  <h1>Writing on product, teams, and technology</h1>
+  <p class="lede">Practical guides, team lessons, and architecture notes. Follow on LinkedIn or drop me a line for more.</p>
+  <div class="hero-actions">
+    <a class="button primary" href="https://linkedin.com/in/kadir-ergun" target="_blank" rel="noreferrer">LinkedIn</a>
+    <a class="button ghost" href="mailto:kadirergun@yandex.com">Email</a>
+  </div>
+</section>
+
+<section class="blog-list">
+  {% for post in site.posts %}
+  <article class="blog-card">
+    <p class="post-meta">{{ post.date | date: "%d %B %Y" }}{% if post.tags and post.tags.size > 0 %} · {{ post.tags | join: ", " }}{% endif %}</p>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% if post.categories %}
+    <div class="meta-badges">
+      {% for cat in post.categories %}
+      <span class="badge badge-category">{{ cat }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if post.description %}
+    <p class="excerpt">{{ post.description }}</p>
+    {% else %}
+    <p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+    {% endif %}
+    <a class="inline-link" href="{{ post.url | relative_url }}">Read More →</a>
+  </article>
+  {% else %}
+  <p class="empty-state">No content yet.</p>
+  {% endfor %}
+</section>

@@ -1,3 +1,26 @@
+title: "Kadir Ergün"
+description: "Notes on engineering leadership, technology strategy, and team culture."
+url: "https://kadirergun.com"
+
 remote_theme: pages-themes/midnight@v0.2.0
+
+permalink: /blog/:year/:month/:day/:title/
+
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
+  - jekyll-sitemap
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Kadir Ergün"
+      permalink: /blog/:year/:month/:day/:title/

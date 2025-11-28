@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% include head-custom.html %}
+</head>
+<body class="site-shell">
+  <header class="site-header">
+    <div class="site-brand">
+      <a class="brand-name" href="{{ '/' | relative_url }}">{{ site.title | default: 'Anasayfa' }}</a>
+      <p class="brand-tagline">{{ site.description }}</p>
+    </div>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+      <a href="{{ '/projects.html' | relative_url }}" class="{% if page.url contains 'projects' %}active{% endif %}">Projects</a>
+      <a href="{{ '/blog/' | relative_url }}" class="{% if page.url contains '/blog' %}active{% endif %}">Blog</a>
+      <a href="mailto:kadirergun@yandex.com">Contact</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>© {{ site.time | date: '%Y' }} {{ site.title }} — Engineering leadership & teknoloji notları.</p>
+  </footer>
+</body>
+</html>

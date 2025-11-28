@@ -1,0 +1,152 @@
+<!-- Highlight.js CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+
+<!-- Highlight.js JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  hljs.highlightAll();
+  hljs.initLineNumbersOnLoad();
+
+  document.querySelectorAll("pre code").forEach(code => {
+    const pre = code.parentElement;
+    const wrapper = document.createElement("div");
+    wrapper.className = "code-wrapper";
+
+    // Detect language
+    const lang = [...code.classList]
+      .find(c => c.startsWith("language-"))
+      ?.replace("language-", "") || "text";
+
+    // Extract filename / github link from data attributes
+    const filename = code.getAttribute("data-filename");
+    const githubUrl = code.getAttribute("data-github");
+
+    // Toolbar
+    const toolbar = document.createElement("div");
+    toolbar.className = "code-toolbar";
+
+    const left = document.createElement("div");
+    left.className = "toolbar-left";
+
+    const langSpan = document.createElement("span");
+    langSpan.className = "code-lang";
+    langSpan.textContent = filename || lang;
+
+    left.appendChild(langSpan);
+
+    const right = document.createElement("div");
+    right.className = "toolbar-right";
+
+    // GitHub button
+    if (githubUrl) {
+      const gh = document.createElement("a");
+      gh.href = githubUrl;
+      gh.target = "_blank";
+      gh.className = "github-btn";
+      gh.textContent = "Open in GitHub";
+      right.appendChild(gh);
+    }
+
+    // Copy button
+    const btn = document.createElement("button");
+    btn.className = "code-copy-btn";
+    btn.textContent = "Copy";
+    btn.addEventListener("click", () => {
+      navigator.clipboard.writeText(code.innerText);
+      btn.textContent = "Copied!";
+      setTimeout(() => btn.textContent = "Copy", 1500);
+    });
+    right.appendChild(btn);
+
+    // Fold / Unfold
+    const foldBtn = document.createElement("button");
+    foldBtn.className = "fold-btn";
+    foldBtn.textContent = "Hide";
+    foldBtn.addEventListener("click", () => {
+      pre.style.display = pre.style.display === "none" ? "block" : "none";
+      foldBtn.textContent = foldBtn.textContent === "Hide" ? "Show" : "Hide";
+    });
+    right.appendChild(foldBtn);
+
+    toolbar.appendChild(left);
+    toolbar.appendChild(right);
+
+    // Replace pre with wrapper
+    pre.parentNode.insertBefore(wrapper, pre);
+    wrapper.appendChild(toolbar);
+    wrapper.appendChild(pre);
+  });
+});
+</script>
+
+<style>
+.code-wrapper {
+  margin-top: 22px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* Top toolbar */
+.code-toolbar {
+  display: flex;
+  justify-content: space-between;
+  background: #f3f4f6;
+  padding: 8px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.toolbar-left {
+  font-weight: 600;
+  color: #374151;
+}
+
+.toolbar-right {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons */
+.code-copy-btn,
+.fold-btn,
+.github-btn {
+  background: #e5e7eb;
+  border: 1px solid #d1d5db;
+  padding: 3px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  color: #374151;
+}
+
+.code-copy-btn:hover,
+.fold-btn:hover,
+.github-btn:hover {
+  background: #d1d5db;
+}
+
+/* Code container */
+pre {
+  margin: 0;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  background: #f9fafb !important;
+  overflow: auto;
+}
+
+/* Line number separator */
+.hljs-ln-numbers {
+  border-right: 1px solid #e2e8f0;
+  padding-right: 12px !important;
+  color: #94a3b8 !important;
+}
+
+.hljs-ln-code {
+  padding-left: 12px !important;
+}
+</style>

@@ -1,0 +1,282 @@
+.site-shell {
+  background: $gray-bg;
+  color: $dark-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  .site-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: $dark-color;
+    text-decoration: none;
+  }
+
+  .brand-tagline {
+    margin: 0;
+    color: darken($gray-bg, 35%);
+    font-size: 14px;
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  a {
+    color: $dark-color;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 10px;
+    transition: color 0.2s ease, background 0.2s ease;
+
+    &.active {
+      color: $primary-color;
+      background: lighten($primary-color, 40%);
+    }
+
+    &:hover {
+      color: $primary-color;
+      background: lighten($primary-color, 48%);
+    }
+  }
+}
+
+.site-main {
+  flex: 1;
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 10px 20px 50px;
+}
+
+.site-footer {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 14px 20px 30px;
+  color: darken($gray-bg, 45%);
+  font-size: 13px;
+}
+
+.blog-hero {
+  background: linear-gradient(135deg, lighten($primary-color, 35%), #ffffff);
+  border: 1px solid lighten($primary-color, 25%);
+  border-radius: $border-radius;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  margin: 10px 0 24px 0;
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: darken($primary-color, 5%);
+    font-weight: 700;
+    margin: 0 0 8px 0;
+  }
+
+  h1 {
+    margin: 0 0 12px 0;
+    font-size: 28px;
+    color: $dark-color;
+  }
+
+  .lede {
+    margin: 0 0 16px 0;
+    font-size: 15px;
+    color: darken($gray-bg, 40%);
+    max-width: 760px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid $primary-color;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+  &.primary {
+    background: $primary-color;
+    color: $light-bg;
+    box-shadow: 0 8px 18px rgba(210, 122, 34, 0.25);
+  }
+
+  &.ghost {
+    background: transparent;
+    color: $primary-color;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.blog-card {
+  background: $light-bg;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+  transition: transform 0.12s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border-left: 4px solid lighten($primary-color, 5%);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: lighten($primary-color, 20%);
+  }
+
+  h2 {
+    margin: 6px 0;
+    font-size: 18px;
+    color: $dark-color;
+  }
+
+  .excerpt {
+    margin: 0 0 10px 0;
+    color: darken($gray-bg, 45%);
+    line-height: 1.5;
+  }
+}
+
+.post-meta {
+  margin: 0;
+  color: darken($gray-bg, 45%);
+  font-size: 13px;
+}
+
+.meta-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 6px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid $border-color;
+  background: lighten($gray-bg, 2%);
+  color: $dark-color;
+}
+
+.badge-category {
+  border-color: lighten($primary-color, 18%);
+  background: lighten($primary-color, 45%);
+}
+
+.badge-tag {
+  border-color: lighten($accent-color, 18%);
+  background: lighten($accent-color, 45%);
+}
+
+.post {
+  background: $light-bg;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+  margin-top: 10px;
+
+  h1 {
+    margin: 6px 0 12px 0;
+    color: $dark-color;
+  }
+
+  .post-lead {
+    font-size: 16px;
+    color: darken($gray-bg, 40%);
+    margin-top: 0;
+  }
+
+  .post-body {
+    line-height: 1.65;
+
+    h2, h3 {
+      color: $primary-color;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+  }
+}
+
+.empty-state {
+  color: darken($gray-bg, 45%);
+  font-style: italic;
+}
+
+.blog-cta {
+  background: lighten($primary-color, 42%);
+  border: 1px solid lighten($primary-color, 25%);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 12px 0 18px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    margin: 0 0 6px 0;
+    color: $dark-color;
+  }
+
+  p {
+    margin: 0;
+    color: darken($gray-bg, 45%);
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .blog-hero {
+    padding: 18px;
+  }
+}

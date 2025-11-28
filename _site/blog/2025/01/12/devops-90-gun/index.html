@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A 90-day plan for a DevOps transformation</title>
+  <meta name="description" content="Measurement set, pipeline standard, and a platform mindset to increase delivery speed.">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Highlight.js CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+
+<!-- Highlight.js JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  hljs.highlightAll();
+  hljs.initLineNumbersOnLoad();
+
+  document.querySelectorAll("pre code").forEach(code => {
+    const pre = code.parentElement;
+    const wrapper = document.createElement("div");
+    wrapper.className = "code-wrapper";
+
+    // Detect language
+    const lang = [...code.classList]
+      .find(c => c.startsWith("language-"))
+      ?.replace("language-", "") || "text";
+
+    // Extract filename / github link from data attributes
+    const filename = code.getAttribute("data-filename");
+    const githubUrl = code.getAttribute("data-github");
+
+    // Toolbar
+    const toolbar = document.createElement("div");
+    toolbar.className = "code-toolbar";
+
+    const left = document.createElement("div");
+    left.className = "toolbar-left";
+
+    const langSpan = document.createElement("span");
+    langSpan.className = "code-lang";
+    langSpan.textContent = filename || lang;
+
+    left.appendChild(langSpan);
+
+    const right = document.createElement("div");
+    right.className = "toolbar-right";
+
+    // GitHub button
+    if (githubUrl) {
+      const gh = document.createElement("a");
+      gh.href = githubUrl;
+      gh.target = "_blank";
+      gh.className = "github-btn";
+      gh.textContent = "Open in GitHub";
+      right.appendChild(gh);
+    }
+
+    // Copy button
+    const btn = document.createElement("button");
+    btn.className = "code-copy-btn";
+    btn.textContent = "Copy";
+    btn.addEventListener("click", () => {
+      navigator.clipboard.writeText(code.innerText);
+      btn.textContent = "Copied!";
+      setTimeout(() => btn.textContent = "Copy", 1500);
+    });
+    right.appendChild(btn);
+
+    // Fold / Unfold
+    const foldBtn = document.createElement("button");
+    foldBtn.className = "fold-btn";
+    foldBtn.textContent = "Hide";
+    foldBtn.addEventListener("click", () => {
+      pre.style.display = pre.style.display === "none" ? "block" : "none";
+      foldBtn.textContent = foldBtn.textContent === "Hide" ? "Show" : "Hide";
+    });
+    right.appendChild(foldBtn);
+
+    toolbar.appendChild(left);
+    toolbar.appendChild(right);
+
+    // Replace pre with wrapper
+    pre.parentNode.insertBefore(wrapper, pre);
+    wrapper.appendChild(toolbar);
+    wrapper.appendChild(pre);
+  });
+});
+</script>
+
+<style>
+.code-wrapper {
+  margin-top: 22px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* Top toolbar */
+.code-toolbar {
+  display: flex;
+  justify-content: space-between;
+  background: #f3f4f6;
+  padding: 8px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.toolbar-left {
+  font-weight: 600;
+  color: #374151;
+}
+
+.toolbar-right {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons */
+.code-copy-btn,
+.fold-btn,
+.github-btn {
+  background: #e5e7eb;
+  border: 1px solid #d1d5db;
+  padding: 3px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  color: #374151;
+}
+
+.code-copy-btn:hover,
+.fold-btn:hover,
+.github-btn:hover {
+  background: #d1d5db;
+}
+
+/* Code container */
+pre {
+  margin: 0;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  background: #f9fafb !important;
+  overflow: auto;
+}
+
+/* Line number separator */
+.hljs-ln-numbers {
+  border-right: 1px solid #e2e8f0;
+  padding-right: 12px !important;
+  color: #94a3b8 !important;
+}
+
+.hljs-ln-code {
+  padding-left: 12px !important;
+}
+</style>
+
+</head>
+<body class="site-shell">
+  <header class="site-header">
+    <div class="site-brand">
+      <a class="brand-name" href="/">Kadir Ergün</a>
+      <p class="brand-tagline">Notes on engineering leadership, technology strategy, and team culture.</p>
+    </div>
+    <nav class="site-nav">
+      <a href="/" class="">Home</a>
+      <a href="/projects.html" class="">Projects</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="mailto:kadirergun@yandex.com">Contact</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <article class="post">
+  <p class="post-meta">12 January 2025 · Kadir Ergün</p>
+  
+  <div class="meta-badges">
+    
+    <span class="badge badge-category">DevOps</span>
+    
+    <span class="badge badge-category">Platform</span>
+    
+  </div>
+  
+  
+  <div class="meta-badges">
+    
+    <span class="badge badge-tag">devops</span>
+    
+    <span class="badge badge-tag">ci-cd</span>
+    
+    <span class="badge badge-tag">team</span>
+    
+  </div>
+  
+  <h1>A 90-day plan for a DevOps transformation</h1>
+  
+  <p class="post-lead">Measurement set, pipeline standard, and a platform mindset to increase delivery speed.</p>
+  
+  <div class="post-body">
+    <p>Fast delivery starts with a clear picture everyone can see. I begin by collecting three core metrics—deployment frequency, lead time, and change fail rate—so the numbers tell us where we stand.</p>
+
+<pre>
+<code class="language-javascript" data-filename="api.js" data-github="https://github.com/kadirergun/repo/api.js">
+console.log("hello");
+</code>
+</pre>
+
+<h2 id="days-0-30-take-the-snapshot">Days 0-30: Take the snapshot</h2>
+<ul>
+  <li>List bottlenecks in current pipelines/environments; name owners.</li>
+  <li>Map every manual prod step; list automation opportunities.</li>
+  <li>Pick a pilot repo and lock in automated tests + static analysis + container build.</li>
+</ul>
+
+<h2 id="days-30-60-define-the-standard">Days 30-60: Define the standard</h2>
+<ul>
+  <li>Create a shared template for all services: build, test, quality gate, image naming, versioning.</li>
+  <li>Publish a reusable pipeline/action library plus a sample repo for teams to copy.</li>
+  <li>Trial trunk-based branching + feature flags to keep changes small.</li>
+</ul>
+
+<h2 id="days-60-90-productize-the-platform">Days 60-90: Productize the platform</h2>
+<ul>
+  <li>Build shared IaC modules (network, database, observability) and make them self-service.</li>
+  <li>Share deployment insights on a dashboard; summarize red areas weekly.</li>
+  <li>Simplify the post-mortem template so it’s fillable in 30 minutes.</li>
+</ul>
+
+<h2 id="metrics-to-watch">Metrics to watch</h2>
+<ul>
+  <li>Deployment frequency: How many times per week to prod?</li>
+  <li>Lead time: Merge to live.</li>
+  <li>Change fail rate: Rollback/incident rate for live changes.</li>
+  <li>Mean time to recovery: Detecting impact to restoring service health.</li>
+</ul>
+
+  </div>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Kadir Ergün — Engineering leadership & teknoloji notları.</p>
+  </footer>
+</body>
+</html>
