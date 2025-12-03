@@ -38,3 +38,6 @@ assets/css/*.map
 
 # Optional: if you generate PDFs locally
 *.pdf
+
+
+_site/*
