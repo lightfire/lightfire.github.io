@@ -3,7 +3,8 @@ layout: default
 ---
 
 <article class="post">
-  <p class="post-meta">{{ page.date | date: "%d %B %Y" }} · {{ page.author | default: site.title }}</p>
+  <p class="post-meta">{{ page.date | date: "%d %B %Y" }} ú {{ page.author | default: site.title }}</p>
+
   {% if page.categories %}
   <div class="meta-badges">
     {% for cat in page.categories %}
@@ -11,18 +12,57 @@ layout: default
     {% endfor %}
   </div>
   {% endif %}
+
   {% if page.tags %}
   <div class="meta-badges">
     {% for tag in page.tags %}
-    <span class="badge badge-tag">{{ tag }}</span>
+    {% assign slug = tag | slugify %}
+    <a class="badge badge-tag" href="{{ '/tags/#' | append: slug | relative_url }}">{{ tag }}</a>
     {% endfor %}
   </div>
   {% endif %}
+
   <h1>{{ page.title }}</h1>
   {% if page.description %}
   <p class="post-lead">{{ page.description }}</p>
   {% endif %}
+
   <div class="post-body">
     {{ content }}
   </div>
+
+  {% comment %}
+    Related posts: up to 3 posts sharing at least one tag with the current page.
+    Hidden when the page has no tags.
+  {% endcomment %}
+  {% if page.tags and page.tags.size > 0 %}
+    {% assign candidates = site.posts
+      | where_exp: "p", "p.url != page.url"
+      | where_exp: "p", "p.tags"
+      | sort: "date"
+      | reverse %}
+
+    {% assign matches = "" | split: "" %}
+    {% for p in candidates %}
+      {% assign overlap = p.tags | intersection: page.tags %}
+      {% if overlap.size > 0 %}
+        {% assign matches = matches | push: p %}
+      {% endif %}
+    {% endfor %}
+    {% assign matches = matches | slice: 0, 3 %}
+
+    {% if matches.size > 0 %}
+    <div class="related-posts">
+      <h3>Ilgili Yazilar</h3>
+      <ul>
+        {% for r in matches %}
+        <li>
+          <a href="{{ r.url | relative_url }}">{{ r.title }}</a>
+          <span class="tag-post-meta">{{ r.date | date: "%d %B %Y" }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  {% endif %}
 </article>

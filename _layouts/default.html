@@ -27,6 +27,7 @@
       <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
       <a href="{{ '/projects.html' | relative_url }}" class="{% if page.url contains 'projects' %}active{% endif %}">Projects</a>
       <a href="{{ '/blog/' | relative_url }}" class="{% if page.url contains '/blog' %}active{% endif %}">Blog</a>
+      <a href="{{ '/tags/' | relative_url }}" class="{% if page.url contains '/tags' %}active{% endif %}">Tags</a>
       <a href="mailto:kadirergun@yandex.com">Contact</a>
     </nav>
   </header>

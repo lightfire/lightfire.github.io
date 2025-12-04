@@ -1,0 +1,41 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+description: "Blog tags, internal links, and post lists by topic."
+---
+
+<section class="tag-hero">
+  <p class="eyebrow">Tags</p>
+  <h1>Explore by topic</h1>
+  <p class="lede">All themes in one place so you can jump to any tag and its posts quickly.</p>
+</section>
+
+<section class="tag-cloud-section">
+  <h2>Tag Cloud</h2>
+  {% include tag-cloud.html %}
+</section>
+
+<section class="tag-sections">
+  <h2>Posts by tag</h2>
+  {% assign tags = site.tags | sort %}
+  {% for tag in tags %}
+    {% assign name = tag[0] %}
+    {% assign posts = tag[1] | sort: 'date' | reverse %}
+    {% assign slug = name | slugify %}
+    <article class="tag-section" id="{{ slug }}">
+      <div class="tag-section-header">
+        <h3>{{ name }}</h3>
+        <span class="tag-section-count">{{ posts.size }} post{% if posts.size != 1 %}s{% endif %}</span>
+      </div>
+      <ul class="tag-post-list">
+        {% for post in posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="tag-post-meta">{{ post.date | date: "%d %B %Y" }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+  {% endfor %}
+</section>

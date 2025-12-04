@@ -324,6 +324,14 @@ a:hover {
   flex-wrap: wrap;
 }
 
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgb(188.0532786885, 109.25, 30.4467213115);
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
 .button {
   display: inline-block;
   padding: 10px 14px;
@@ -461,6 +469,99 @@ a:hover {
 }
 .blog-cta p {
   margin: 0;
+  color: rgb(133.25, 133.25, 133.25);
+}
+
+.tag-hero {
+  background: linear-gradient(135deg, rgb(252, 241.6, 230.4), #ffffff);
+  border: 1px solid rgb(235.7, 185.75, 135.8);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.05);
+  margin: 10px 0 18px 0;
+}
+.tag-hero h1 {
+  margin: 6px 0 10px 0;
+}
+.tag-cloud-section {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  align-items: center;
+}
+.tag-cloud-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 1px solid #f0d9bf;
+  background: #fffaf5;
+  color: #000000;
+  text-decoration: none;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.tag-cloud-item .tag-count {
+  font-size: 11px;
+  color: #c0781f;
+}
+.tag-cloud-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  border-color: #d27a22;
+}
+
+.tag-sections {
+  display: grid;
+  gap: 12px;
+}
+.tag-section {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 16px;
+}
+.tag-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.tag-section h3 {
+  margin: 0;
+}
+.tag-section-count {
+  font-size: 12px;
+  color: rgb(133.25, 133.25, 133.25);
+}
+.tag-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.tag-post-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px dashed #eee;
+  padding: 6px 0;
+}
+.tag-post-list li:last-child {
+  border-bottom: none;
+}
+.tag-post-meta {
+  font-size: 12px;
   color: rgb(133.25, 133.25, 133.25);
 }
 

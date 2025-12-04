@@ -1,0 +1,52 @@
+{% comment %}
+  Tag cloud snippet.
+  Renders all tags with a frequency-based font size and links to the tag detail anchors.
+{% endcomment %}
+{% assign tags = site.tags | sort %}
+
+{% if tags.size > 0 %}
+  {% comment %}Find min and max counts for scaling{% endcomment %}
+  {% assign min_count = 0 %}
+  {% assign max_count = 0 %}
+  {% for tag in tags %}
+    {% assign count = tag[1].size %}
+    {% if forloop.first %}
+      {% assign min_count = count %}
+      {% assign max_count = count %}
+    {% else %}
+      {% if count < min_count %}{% assign min_count = count %}{% endif %}
+      {% if count > max_count %}{% assign max_count = count %}{% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign min_size = 13 %}
+  {% assign max_size = 26 %}
+
+  <div class="tag-cloud">
+    {% for tag in tags %}
+      {% assign name = tag[0] %}
+      {% assign posts = tag[1] %}
+      {% assign count = posts.size %}
+
+      {% assign normalized = count | minus: min_count %}
+      {% assign range = max_count | minus: min_count %}
+      {% assign size = min_size %}
+      {% if range == 0 %}
+        {% assign size = max_size | plus: min_size | divided_by: 2 %}
+      {% else %}
+        {% assign step = max_size | minus: min_size %}
+        {% assign scaled = normalized | times: step | divided_by: range %}
+        {% assign size = min_size | plus: scaled %}
+      {% endif %}
+
+      {% assign slug = name | slugify %}
+      <a class="tag-cloud-item"
+         href="{{ '/tags/#' | append: slug | relative_url }}"
+         style="font-size: {{ size }}px;">
+        {{ name }} <span class="tag-count">{{ count }}</span>
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="empty-state">Tag bulunamadı.</p>
+{% endif %}
