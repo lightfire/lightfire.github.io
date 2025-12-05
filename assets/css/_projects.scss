@@ -32,4 +32,63 @@
   }
 }
 
+/* Web Projects Listing */
+.projects-hero {
+  background: linear-gradient(135deg, #f6eadb, #ffffff);
+  border: 1px solid lighten($primary-color, 30%);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  margin: 10px 0 18px 0;
+
+  h1 { margin: 6px 0 10px 0; }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+
+  &.project-grid-compact {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+.project-card {
+  background: $light-bg;
+  border: 1px solid $border-color;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &.project-card-compact {
+    padding: 12px;
+    gap: 6px;
+  }
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  h3 { margin: 0; }
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-list ul {
+  list-style: disc;
+  margin-left: 18px;
+  line-height: 1.6;
+}
 

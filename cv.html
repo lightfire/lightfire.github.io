@@ -4,85 +4,16 @@ title: CV
 permalink: /cv.html
 description: "CV and experience details for Kadir Ergun."
 ---
+<div class="cv-print-btn">
+  <button onclick="window.print()" type="button">Print</button>
+</div>
 
-<style>
-/* CV page overrides */
-.cv-page {
-  font-size: 13px;
-  line-height: 1.45;
-}
-.cv-page .container {
-  width: min(100%, 1100px);
-  margin: 12px auto;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.cv-page .sidebar {
-  width: 18%;
-  max-width: 240px;
-}
-.cv-page .main-content {
-  width: 80%;
-  max-width: 700px;
-  padding-left: 14px;
-}
-@media (max-width: 900px) {
-  .cv-page .container {
-    flex-direction: column;
-    padding: 0 12px;
-  }
-  .cv-page .sidebar {
-    max-width: none;
-    width: 100%;
-  }
-  .cv-page .main-content { width: 100%; max-width: none; padding-left: 0; }
-}
-.cv-page .main-content h1 { font-size: 28px; margin-bottom: 8px; }
-.cv-page .main-content h2 { font-size: 18px; margin: 6px 0; }
-.cv-page .main-content h3 { font-size: 14px; margin: 4px 0; }
-.cv-page .main-content p { margin: 4px 0 8px 0; }
-.cv-page .main-content ul { margin: 4px 0 10px 14px; }
-.cv-page .sidebar h2 { font-size: 16px; }
-.cv-page .sidebar p, .cv-page .sidebar li, .cv-page .sidebar a { font-size: 12.5px; line-height: 1.35; }
-
-@media print {
-  .site-header,
-  .site-footer {
-    display: none !important;
-  }
-  body {
-    background: #ffffff !important;
-  }
-  .cv-page .container {
-    width: 100% !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-    padding: 0 !important;
-  }
-  .cv-page .sidebar,
-  .cv-page .main-content {
-    max-width: none !important;
-  }
-  .cv-page .sidebar {
-    width: 18% !important;
-    max-width: 240px !important;
-    border: 1px solid #ddd !important;
-    border-radius: 0 !important;
-  }
-  .cv-page .main-content {
-    width: 80% !important;
-    max-width: 700px !important;
-    padding-left: 10px !important;
-  }
-}
-</style>
-
-<div class="container cv-page">
+      
+<div class="container cv-page" id="cv-sheet">
   <!-- Sidebar (Left) -->
   <div class="sidebar">
     <div class="image-placeholder">
-      <img src="1709904831969.jpg" alt="Profile Picture" width="150" height="150" style="border-radius: 50%; display: block; margin: 0 auto;">
+      <img src="1709904831969.jpg" alt="Profile Picture" width="150" height="150" class="profile-picture">
     </div>
 
     <div class="sidebar-section">
@@ -91,8 +22,8 @@ description: "CV and experience details for Kadir Ergun."
       <p><span><i class="fas fa-map-marker-alt"></i> Istanbul, Turkey</span></p>
       <p><a href="tel:+905071037277"><span><i class="fas fa-phone"></i> +90 507 103 7277</span></a></p>
       <p><a href="mailto:kadirergun@yandex.com"><span><i class="fas fa-envelope"></i> kadirergun@yandex.com</span></a></p>
-      <p><a href="https://linkedin.com/in/kadir-ergun" target="_blank"><span><i class="fab fa-linkedin"></i> linkedin.com/in/kadir-ergun</span></a></p>
-      <p><a href="https://github.com/lightfire" target="_blank"><span><i class="fab fa-github"></i> github.com/lightfire</span></a></p>
+      <p><a href="https://linkedin.com/in/kadir-ergun" target="_blank" rel="noopener noreferrer"><span><i class="fab fa-linkedin"></i> linkedin.com/in/kadir-ergun</span></a></p>
+      <p><a href="https://github.com/lightfire" target="_blank" rel="noopener noreferrer"><span><i class="fab fa-github"></i> github.com/lightfire</span></a></p>
     </div>
 
     <div class="sidebar-section">
@@ -216,7 +147,7 @@ description: "CV and experience details for Kadir Ergun."
         <li>WeFocus SaaS — Java microservices, Kubernetes, VueJS; enterprise engagement platform.</li>
         <li>KoçAilem Loyalty — 200K+ users; C#, Kentico, SSO, DevOps pipelines.</li>
         <li>Fenerium / Avis / Budget — high-traffic e-commerce with payments, recommendation, CRM.</li>
-        <li>More projects: <a class="inline-link" href="https://kadirergun.com/projects.html">kadirergun.com/projects.html</a></li>
+        <li>More projects: <a class="inline-link" href="https://kadirergun.com/projects.html" rel="noopener noreferrer">kadirergun.com/projects.html</a></li>
       </ul>
     </div>
   </div>

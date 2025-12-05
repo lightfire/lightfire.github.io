@@ -1,0 +1,137 @@
+/* CV Page Styling */
+.cv-page {
+  font-size: 13px;
+  line-height: 1.45;
+}
+.cv-page .container {
+  width: min(100%, 1100px);
+  margin: 12px auto;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #ffffff;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.cv-page .sidebar {
+  width: 18%;
+  max-width: 240px;
+}
+.cv-page .sidebar h2 {
+  font-size: 16px;
+}
+.cv-page .sidebar p,
+.cv-page .sidebar li,
+.cv-page .sidebar a {
+  font-size: 12.5px;
+  line-height: 1.35;
+}
+.cv-page .main-content {
+  width: 80%;
+  max-width: 700px;
+  padding-left: 14px;
+}
+.cv-page .main-content h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.cv-page .main-content h2 {
+  font-size: 18px;
+  margin: 6px 0;
+}
+.cv-page .main-content h3 {
+  font-size: 14px;
+  margin: 4px 0;
+}
+.cv-page .main-content p {
+  margin: 4px 0 8px 0;
+}
+.cv-page .main-content ul {
+  margin: 4px 0 10px 14px;
+}
+.cv-page ul,
+.cv-page li,
+.cv-page h2,
+.cv-page h3,
+.cv-page p {
+  page-break-inside: avoid;
+}
+@media (max-width: 900px) {
+  .cv-page .container {
+    flex-direction: column;
+    padding: 0 12px;
+  }
+  .cv-page .sidebar {
+    max-width: none;
+    width: 100%;
+  }
+  .cv-page .main-content {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+  }
+}
+@media print {
+  .cv-page .site-header,
+  .cv-page .site-footer {
+    display: none !important;
+  }
+  .cv-page body {
+    background: #ffffff !important;
+  }
+  .cv-page .container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+  }
+  .cv-page .sidebar,
+  .cv-page .main-content {
+    max-width: none !important;
+  }
+  .cv-page .sidebar {
+    width: 18% !important;
+    max-width: 240px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 0 !important;
+  }
+  .cv-page .main-content {
+    width: 80% !important;
+    max-width: 700px !important;
+    padding-left: 10px !important;
+  }
+  .cv-page .cv-print-btn {
+    display: none !important;
+  }
+}
+
+/* Print Button */
+.cv-print-btn {
+  margin: 10px auto;
+  max-width: 1100px;
+  text-align: right;
+}
+@media (max-width: 900px) {
+  .cv-print-btn {
+    text-align: left;
+    padding: 0 12px;
+  }
+}
+.cv-print-btn button {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #d27a22;
+  background: #d27a22;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Profile Picture */
+.profile-picture {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=cv.css.map */
