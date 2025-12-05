@@ -24,9 +24,9 @@
       <p class="brand-tagline">{{ site.description }}</p>
     </div>
     <nav class="site-nav">
-      <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+      <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' or page.url contains '/page' or page.url contains '/blog/' %}active{% endif %}">Blog</a>
       <a href="{{ '/projects.html' | relative_url }}" class="{% if page.url contains 'projects' %}active{% endif %}">Projects</a>
-      <a href="{{ '/blog/' | relative_url }}" class="{% if page.url contains '/blog' %}active{% endif %}">Blog</a>
+      <a href="{{ '/cv.html' | relative_url }}" class="{% if page.url contains 'cv' %}active{% endif %}">CV</a>
       <a href="{{ '/tags/' | relative_url }}" class="{% if page.url contains '/tags' %}active{% endif %}">Tags</a>
       <a href="mailto:kadirergun@yandex.com">Contact</a>
     </nav>

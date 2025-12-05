@@ -9,7 +9,11 @@ permalink: /blog/:year/:month/:day/:title/
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
+  - jekyll-paginate
 
+paginate: 6
+paginate_path: "/page:num/"
+future: true
 markdown: kramdown
 highlighter: rouge
 
