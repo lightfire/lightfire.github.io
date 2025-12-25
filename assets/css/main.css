@@ -299,6 +299,11 @@ a:hover {
 }
 .site-header .site-brand {
   display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.site-header .brand-text {
+  display: flex;
   flex-direction: column;
   gap: 6px;
 }
@@ -312,6 +317,14 @@ a:hover {
   margin: 0;
   color: rgb(158.75, 158.75, 158.75);
   font-size: 14px;
+}
+.site-header .site-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgb(239.2540983607, 198.5, 157.7459016393);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
 }
 
 .site-nav {

@@ -20,8 +20,11 @@
 <body class="site-shell">
   <header class="site-header">
     <div class="site-brand">
-      <a class="brand-name" href="{{ '/' | relative_url }}">{{ site.title | default: 'Anasayfa' }}</a>
-      <p class="brand-tagline">{{ site.description }}</p>
+      <img class="site-avatar" src="{{ '/assets/img/kadir_ergun_profile.jpg' | relative_url }}" alt="Kadir Ergun">
+      <div class="brand-text">
+        <a class="brand-name" href="{{ '/' | relative_url }}">{{ site.title | default: 'Anasayfa' }}</a>
+        <p class="brand-tagline">{{ site.description }}</p>
+      </div>
     </div>
     <nav class="site-nav">
       <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' or page.url contains '/page' or page.url contains '/blog/' %}active{% endif %}">Blog</a>
