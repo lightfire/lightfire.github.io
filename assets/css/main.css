@@ -971,11 +971,30 @@ a:hover {
   cursor: pointer;
 }
 
+
+.image-placeholder {
+  width: 150px;
+  height: 209px;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  transition: transform 0.3s ease; /* Yumuşak geçiş sağlar */
+  transform: scale(1.2);
+}
+.image-placeholder img:hover {
+  transform: scale(1.4);
+}
+
 /* Profile Picture */
 .profile-picture {
-  border-radius: 50%;
+  border-radius: 3%;
   display: block;
   margin: 0 auto;
+  max-width: 150px;
+  max-height: 209px;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
