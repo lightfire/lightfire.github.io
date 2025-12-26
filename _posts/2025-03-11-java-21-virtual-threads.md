@@ -23,7 +23,8 @@ With Java 21, it is now reasonable—and fast—to process each request on its o
 
 Creating a million threads used to be impossible. With virtual threads, the following code just works:
 
-```java
+<pre>
+<code class="language-java">
 try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
     IntStream.range(0, 1_000_000).forEach(i ->
         executor.submit(() -> {
@@ -32,7 +33,8 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
         })
     );
 }
-```
+</code>
+</pre>
 
 ## Less Need for Asynchronous Code
 
@@ -59,7 +61,8 @@ Java 21 also introduces Structured Concurrency (Preview). Combined with virtual 
 
 Example:
 
-```java
+<pre>
+<code class="language-java">
 try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
     var user  = scope.fork(() -> fetchUser());
     var posts = scope.fork(() -> fetchPosts());
@@ -69,7 +72,8 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
     return new UserProfile(user.get(), posts.get());
 }
-```
+</code>
+</pre>
 
 This structure provides parallelism with orderly lifecycle management.
 

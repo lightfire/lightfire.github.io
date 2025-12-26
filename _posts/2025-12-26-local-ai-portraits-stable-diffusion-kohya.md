@@ -20,7 +20,9 @@ You can produce LinkedIn- and CV-ready headshots entirely on your own machine—
 
 ## 3) Stable Diffusion WebUI (AUTOMATIC1111)
 Install:
-<pre><code class="language-bash">git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+<pre>
+<code class="language-bash">
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 cd stable-diffusion-webui
 </code></pre>
 Run:
@@ -30,32 +32,46 @@ UI: `http://127.0.0.1:7860`
 
 ## 4) kohya_ss for LoRA training
 Install:
-<pre><code class="language-bash">git clone https://github.com/bmaltais/kohya_ss.git
+<pre>
+<code class="language-bash">
+git clone https://github.com/bmaltais/kohya_ss.git
 cd kohya_ss
 </code></pre>
 Create venv and install deps:
-<pre><code class="language-bash">python -m venv venv
+<pre>
+<code class="language-bash">
+python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
-</code></pre>
+</code>
+</pre>
 Run:
-<pre><code class="language-bash">python kohya_gui.py
-</code></pre>
+<pre>
+<code class="language-bash">
+python kohya_gui.py
+</code>
+</pre>
 UI: `http://127.0.0.1:7861`
 
 ## 5) Prepare training data
 Folder layout:
-<pre><code class="language-text">training/
+<pre>
+<code class="language-text">
+training/
 └── 12_personname man/
     ├── 001.jpg
     ├── 001.txt
     ├── 002.jpg
     ├── 002.txt
     └── ...
-</code></pre>
+</code>
+</pre>
 Caption content for each `.txt`:
-<pre><code class="language-text">photo of personname man
-</code></pre>
+<pre>
+<code class="language-text">
+photo of personname man
+</code>
+</pre>
 Tips: 15-20 clean, varied shots (angles, lighting, backgrounds) work well; avoid sunglasses/heavy filters.
 
 ## 6) LoRA training settings (good starting point)
@@ -71,15 +87,24 @@ Tips: 15-20 clean, varied shots (angles, lighting, backgrounds) work well; avoid
 
 ## 7) Use the trained LoRA in WebUI
 LoRA file lands at:
-<pre><code class="language-text">stable-diffusion-webui/models/Lora/personname_lora_v1.safetensors
-</code></pre>
+<pre>
+<code class="language-text">
+stable-diffusion-webui/models/Lora/personname_lora_v1.safetensors
+</code>
+</pre>
+
 Add to your prompt:
-<pre><code class="language-text"><lora:personname_lora_v1:0.6>
-</code></pre>
+<pre>
+<code class="language-text">
+<lora:personname_lora_v1:0.6>
+</code>
+</pre>
 
 ## 8) Professional portrait prompt (ready-to-use)
 Main prompt:
-<pre><code class="language-text">professional portrait of a man in his late 30s,
+<pre>
+<code class="language-text">
+professional portrait of a man in his late 30s,
 mediterranean / turkish appearance,
 natural male hairline with slightly receding temples,
 slightly fuller cheeks,
@@ -98,14 +123,19 @@ ultra realistic,
 high detail,
 natural skin texture,
 no beauty filter
-</code></pre>
+</code>
+</pre>
+
 Negative prompt:
-<pre><code class="language-text">woman, female,
+<pre>
+<code class="language-text">
+woman, female,
 cross-eyed, asymmetrical eyes,
 plastic skin,
 beauty filter,
 cartoon, anime
-</code></pre>
+</code>
+</pre>
 
 ## 9) Output formats
 - LinkedIn: 1:1  
