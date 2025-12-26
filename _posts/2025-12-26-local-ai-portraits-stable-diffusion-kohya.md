@@ -2,7 +2,7 @@
 title: "Fully Local AI Portraits with Stable Diffusion + kohya_ss (LoRA)"
 description: "Step-by-step guide to train and generate ultra-realistic professional headshots locally with Stable Diffusion WebUI and kohya_ss LoRA."
 categories: [AI, Computer Vision]
-tags: [stable-diffusion, lora, kohya_ss, computer-vision, portraits, on-prem]
+tags: [stable-diffusion, lora, kohya_ss, computer-vision, portraits, on-prem, ai]
 ---
 
 You can produce LinkedIn- and CV-ready headshots entirely on your own machine—no cloud, no uploads. This post walks through the end-to-end local workflow: prerequisites, installs, data prep, LoRA training in kohya_ss, and generating professional portraits in AUTOMATIC1111.
