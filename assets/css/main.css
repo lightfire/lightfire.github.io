@@ -258,11 +258,33 @@ a:hover {
   gap: 6px;
 }
 
+.project-thumb {
+  margin: 0;
+}
+.project-thumb-btn {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8e8d8, #ffffff);
+  border: 1px solid #f0d9bf;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.02);
+  padding: 0;
+  cursor: zoom-in;
+  display: block;
+}
+.project-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .project-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
 }
 .project-header h3 {
   margin: 0;
@@ -272,6 +294,50 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 999;
+}
+.lightbox-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lightbox-inner {
+  position: relative;
+  max-width: min(90vw, 1100px);
+  max-height: 90vh;
+}
+.lightbox-img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+.lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 .project-list ul {

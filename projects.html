@@ -23,120 +23,31 @@ description: "Selected product, platform, and e-commerce work."
 </section>
 
 <section class="project-grid">
+  {% for project in site.data.projects.highlights %}
+  {% assign thumb_url = project.thumb | default: '/assets/img/modernization-roadmap.png' %}
+  {% assign full_url = project.full | default: thumb_url %}
   <article class="project-card">
+    {% if thumb_url %}
+    <figure class="project-thumb">
+      <button type="button" class="project-thumb-btn" data-full="{{ full_url | relative_url }}" data-alt="{{ project.title }}">
+        <img src="{{ thumb_url | relative_url }}" alt="{{ project.title }}" loading="lazy" style="{% if project.thumb_position %}object-position: {{ project.thumb_position }};{% endif %}">
+      </button>
+    </figure>
+    {% endif %}
     <div class="project-header">
-      <h3>WeFocus SaaS Platform</h3>
-      <span class="badge badge-category">SaaS</span>
+      <h3>{{ project.title }}</h3>
+      <span class="badge badge-category">{{ project.category }}</span>
     </div>
-    <p>Employee engagement platform built with Java microservices, VueJS, PostgreSQL, Kubernetes, Istio; improved performance by 30% via service optimization.</p>
+    <p>{{ project.description }}</p>
+    {% if project.tags %}
     <div class="project-tags">
-      <span class="badge badge-tag">Java</span>
-      <span class="badge badge-tag">Vue</span>
-      <span class="badge badge-tag">Kubernetes</span>
-      <span class="badge badge-tag">Istio</span>
+      {% for tag in project.tags %}
+      <span class="badge badge-tag">{{ tag }}</span>
+      {% endfor %}
     </div>
+    {% endif %}
   </article>
-
-  <article class="project-card">
-    <div class="project-header">
-      <h3>Petal Maps</h3>
-      <span class="badge badge-category">Mobile</span>
-    </div>
-    <p>Navigation app for HarmonyOS, Android, and iOS; Spring Boot, Kafka, Redis, MyBatis. Led architecture and performance across platforms.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Spring Boot</span>
-      <span class="badge badge-tag">Kafka</span>
-      <span class="badge badge-tag">Redis</span>
-    </div>
-  </article>
-
-  <article class="project-card">
-    <div class="project-header">
-      <h3>EBG B2B E-Commerce</h3>
-      <span class="badge badge-category">E-Comm</span>
-    </div>
-    <p>Custom CMS and multilingual commerce for e.huawei.com with Spring Boot, ElasticSearch, NLP, Restful APIs, Kafka, Kubernetes.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">ElasticSearch</span>
-      <span class="badge badge-tag">Microservices</span>
-      <span class="badge badge-tag">Kubernetes</span>
-    </div>
-  </article>
-
-  <article class="project-card">
-    <div class="project-header">
-      <h3>KoçAilem Loyalty App</h3>
-      <span class="badge badge-category">Loyalty</span>
-    </div>
-    <p>200K+ users across employees and families; built with C#, Kentico, DevOps pipelines, and SSO integration.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-      <span class="badge badge-tag">SSO</span>
-      <span class="badge badge-tag">CMS</span>
-    </div>
-  </article>
-
-  <article class="project-card">
-    <div class="project-header">
-      <h3>Fenerium E-Commerce</h3>
-      <span class="badge badge-category">E-Comm</span>
-    </div>
-    <p>Online retail for Fenerbahçe S.K. with payment gateway and recommendation engine; Kentico CMS backbone.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">.NET</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-      <span class="badge badge-tag">Payments</span>
-      <span class="badge badge-tag">CMS</span>
-    </div>
-  </article>
-
-  <article class="project-card">
-    <div class="project-header">
-      <h3>Avis Turkey</h3>
-      <span class="badge badge-category">E-Comm</span>
-    </div>
-    <p>CRM-integrated car rental e-commerce; performance-focused mobile UX and seamless checkout.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">E-Comm</span>
-      <span class="badge badge-tag">CRM</span>
-      <span class="badge badge-tag">Payments</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-
-  <article class="project-card">
-    <div class="project-header">
-      <h3>Budget Turkey</h3>
-      <span class="badge badge-category">E-Comm</span>
-    </div>
-    <p>Parallel rental commerce platform with CRM integrations and localized funnels.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">E-Comm</span>
-      <span class="badge badge-tag">CRM</span>
-      <span class="badge badge-tag">Mobile</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-
-  <article class="project-card">
-    <div class="project-header">
-      <h3>Fenerbahce.org</h3>
-      <span class="badge badge-category">Sports</span>
-    </div>
-    <p>Official club site with e-commerce, subscription payments, player data integrations, and marketing automation.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">E-Comm</span>
-      <span class="badge badge-tag">Integrations</span>
-      <span class="badge badge-tag">Automation</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-      <span class="badge badge-tag">CMS</span>
-    </div>
-  </article>
+  {% endfor %}
 </section>
 
 <section class="section-head">
@@ -147,345 +58,66 @@ description: "Selected product, platform, and e-commerce work."
 </section>
 
 <section class="project-grid project-grid-compact">
+  {% for project in site.data.projects.more %}
   <article class="project-card project-card-compact">
     <div class="project-header">
-      <h3>divan.com.tr</h3>
-      <span class="badge badge-category">E-Comm</span>
+      <h3>{{ project.title }}</h3>
+      <span class="badge badge-category">{{ project.category }}</span>
     </div>
-    <p>Hotel booking and events/tickets for Divan’s properties.</p>
+    <p>{{ project.description }}</p>
+    {% if project.tags %}
     <div class="project-tags">
-      <span class="badge badge-tag">.NET</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-      <span class="badge badge-tag">Payments</span>
+      {% for tag in project.tags %}
+      <span class="badge badge-tag">{{ tag }}</span>
+      {% endfor %}
     </div>
+    {% endif %}
   </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>divanpastaneleri.com.tr</h3>
-      <span class="badge badge-category">E-Comm</span>
-    </div>
-    <p>Retail commerce on nopCommerce for Divan patisserie.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">nopCommerce</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Payments</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>TurkTraktor</h3>
-      <span class="badge badge-category">Web</span>
-    </div>
-    <p>Vehicle catalog and specs for the core brand.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">CMS</span>
-      <span class="badge badge-tag">Catalog</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>New Holland Turkey</h3>
-      <span class="badge badge-category">Web</span>
-    </div>
-    <p>Localized brand site with product specs and marketing automation.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">CMS</span>
-      <span class="badge badge-tag">Automation</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Case IH Turkey</h3>
-      <span class="badge badge-category">Web</span>
-    </div>
-    <p>Equipment catalog and lead capture for Case IH.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">CMS</span>
-      <span class="badge badge-tag">Catalog</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Koç Corporate</h3>
-      <span class="badge badge-category">Corporate</span>
-    </div>
-    <p>Modernized corporate identity and CMS rollout.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">CMS</span>
-      <span class="badge badge-tag">Design System</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>E-DNA Mobile App</h3>
-      <span class="badge badge-category">Mobile</span>
-    </div>
-    <p>Android app powered by QlikSense dashboards; live sales/ops data for staff.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Android</span>
-      <span class="badge badge-tag">QlikSense</span>
-      <span class="badge badge-tag">Dashboards</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>CepCard Mobile Payment</h3>
-      <span class="badge badge-category">Fintech</span>
-    </div>
-    <p>Wallet integration and secure in-app payments.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Payments</span>
-      <span class="badge badge-tag">Android</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Ford Turkey (ford.com.tr)</h3>
-      <span class="badge badge-category">Automotive</span>
-    </div>
-    <p>National brand site with marketing automation and CRM integrations.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">CRM</span>
-      <span class="badge badge-tag">Automation</span>
-      <span class="badge badge-tag">Integrations</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Eczacibasi Ilaç Pazarlama</h3>
-      <span class="badge badge-category">Corporate</span>
-    </div>
-    <p>Corporate web presence and content platform.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">CMS</span>
-      <span class="badge badge-tag">Web</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>KoçDigital</h3>
-      <span class="badge badge-category">Corporate</span>
-    </div>
-    <p>Innovation-focused corporate site.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Web</span>
-      <span class="badge badge-tag">CMS</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>KoçZer</h3>
-      <span class="badge badge-category">Corporate</span>
-    </div>
-    <p>Service division corporate site.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Web</span>
-      <span class="badge badge-tag">CMS</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Tat</h3>
-      <span class="badge badge-category">Brand</span>
-    </div>
-    <p>Product brand site with marketing automation.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Brand</span>
-      <span class="badge badge-tag">Web</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Imutor</h3>
-      <span class="badge badge-category">Brand</span>
-    </div>
-    <p>Product brand site with campaign tracking.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Brand</span>
-      <span class="badge badge-tag">Web</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>KTSK</h3>
-      <span class="badge badge-category">Sports</span>
-    </div>
-    <p>Koç Community Sports Club site with purchasing flows.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">E-Comm</span>
-      <span class="badge badge-tag">Web</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Selfit</h3>
-      <span class="badge badge-category">E-Comm</span>
-    </div>
-    <p>Fitness e-commerce with marketplace integrations.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">E-Comm</span>
-      <span class="badge badge-tag">Marketplace</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Dynavit</h3>
-      <span class="badge badge-category">E-Comm</span>
-    </div>
-    <p>Health product e-commerce with marketplace integrations.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">E-Comm</span>
-      <span class="badge badge-tag">Marketplace</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Tokeninc</h3>
-      <span class="badge badge-category">Fintech</span>
-    </div>
-    <p>Brand site with fintech integrations and partner APIs.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Fintech</span>
-      <span class="badge badge-tag">Integrations</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Zubizu QR Event App</h3>
-      <span class="badge badge-category">Mobile</span>
-    </div>
-    <p>Interactive event Android app.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Android</span>
-      <span class="badge badge-tag">Events</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Bayer Cropscience App</h3>
-      <span class="badge badge-category">Mobile</span>
-    </div>
-    <p>Android for agricultural and environmental management.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Android</span>
-      <span class="badge badge-tag">Agriculture</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Amerikan Hastanesi</h3>
-      <span class="badge badge-category">Healthcare</span>
-    </div>
-    <p>Hospital web platform with online appointments and payments.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Payments</span>
-      <span class="badge badge-tag">Appointments</span>
-      <span class="badge badge-tag">Healthcare</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Koç University Hospital</h3>
-      <span class="badge badge-category">Healthcare</span>
-    </div>
-    <p>Patient-facing site with booking and online payments.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Payments</span>
-      <span class="badge badge-tag">Appointments</span>
-      <span class="badge badge-tag">Healthcare</span>
-      <span class="badge badge-tag">C#</span>
-      <span class="badge badge-tag">Kentico</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Textile Automation (Android)</h3>
-      <span class="badge badge-category">Mobile</span>
-    </div>
-    <p>Factory floor automation terminal for all staff; Android device + server + admin panel to assign work and monitor operations.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Android</span>
-      <span class="badge badge-tag">Backend</span>
-      <span class="badge badge-tag">Admin Panel</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>DMS Dashboard (Dogus Holding)</h3>
-      <span class="badge badge-category">Mobile</span>
-    </div>
-    <p>Android dashboard app for C-level leaders showing live revenue across Dogus brands.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Android</span>
-      <span class="badge badge-tag">Dashboard</span>
-      <span class="badge badge-tag">Analytics</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Women’s Health Social App</h3>
-      <span class="badge badge-category">Mobile</span>
-    </div>
-    <p>Android-native community similar to LinkedIn, focused on women’s health; posts, images, DMs.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Android</span>
-      <span class="badge badge-tag">Social</span>
-      <span class="badge badge-tag">Messaging</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Pharmacy Gamified Training</h3>
-      <span class="badge badge-category">Mobile</span>
-    </div>
-    <p>Android app for pharmacy staff: quizzes, levels, rewards; product education with gamification.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Android</span>
-      <span class="badge badge-tag">Gamification</span>
-      <span class="badge badge-tag">Training</span>
-    </div>
-  </article>
-  <article class="project-card project-card-compact">
-    <div class="project-header">
-      <h3>Coffee Fortune App</h3>
-      <span class="badge badge-category">Mobile</span>
-    </div>
-    <p>Android app where users submit photos for coffee fortune readings.</p>
-    <div class="project-tags">
-      <span class="badge badge-tag">Android</span>
-      <span class="badge badge-tag">Consumer</span>
-      <span class="badge badge-tag">Media</span>
-    </div>
-  </article>
+  {% endfor %}
 </section>
+
+<div class="lightbox-overlay" id="project-lightbox" aria-modal="true" role="dialog" hidden>
+  <div class="lightbox-inner">
+    <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
+    <img id="project-lightbox-img" class="lightbox-img" alt="">
+  </div>
+</div>
+
+<script>
+  (() => {
+    const overlay = document.getElementById('project-lightbox');
+    const imgEl = document.getElementById('project-lightbox-img');
+    const closeBtn = overlay?.querySelector('.lightbox-close');
+    if (!overlay || !imgEl || !closeBtn) return;
+
+    const open = (src, alt) => {
+      imgEl.src = src;
+      imgEl.alt = alt || '';
+      overlay.hidden = false;
+      overlay.classList.add('is-open');
+    };
+
+    const close = () => {
+      overlay.classList.remove('is-open');
+      overlay.hidden = true;
+      imgEl.src = '';
+      imgEl.alt = '';
+    };
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest?.('.project-thumb-btn');
+      if (btn) {
+        e.preventDefault();
+        open(btn.dataset.full, btn.dataset.alt);
+      }
+    });
+
+    closeBtn.addEventListener('click', close);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
+    });
+  })();
+</script>

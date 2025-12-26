@@ -1,0 +1,204 @@
+highlights:
+  - title: "EBG B2B E-Commerce"
+    category: "E-Comm"
+    description: "Custom CMS and multilingual commerce for e.huawei.com with Spring Boot, ElasticSearch, NLP, Restful APIs, Kafka, Kubernetes."
+    tags: ["ElasticSearch", "Microservices", "Kubernetes"]
+    thumb: "/assets/img/e-huawei_thumb.png"
+    thumb_position: "70% 50%"
+    full: "/assets/img/e-huawei.png"
+
+  - title: "KoçAilem Loyalty App"
+    category: "Loyalty"
+    description: "200K+ users across employees and families; built with C#, Kentico, DevOps pipelines, and SSO integration."
+    tags: ["C#", "Kentico", "SSO", "CMS"]
+    thumb: "/assets/img/kocailem_thumb.png"
+    thumb_position: "50% 60%"
+    full: "/assets/img/kocailem.png"
+
+  - title: "Fenerium E-Commerce"
+    category: "E-Comm"
+    description: "Online retail for Fenerbahçe S.K. with payment gateway and recommendation engine; Kentico CMS backbone."
+    tags: [".NET", "C#", "Kentico", "Payments", "CMS"]
+    thumb: "/assets/img/fenerium.png"
+    thumb_position: "40% 40%"
+    full: "/assets/img/fenerium.png"
+
+  - title: "Avis Turkey"
+    category: "E-Comm"
+    description: "CRM-integrated car rental e-commerce; performance-focused mobile UX and seamless checkout."
+    tags: ["E-Comm", "CRM", "Payments", "C#", "Kentico"]
+    thumb: "/assets/img/avis_thumb.png"
+    thumb_position: "55% 45%"
+    full: "/assets/img/avis.png"
+
+  - title: "Budget Turkey"
+    category: "E-Comm"
+    description: "Parallel rental commerce platform with CRM integrations and localized funnels."
+    tags: ["E-Comm", "CRM", "Mobile", "C#", "Kentico"]
+    thumb: "/assets/img/budget_thumb.png"
+    thumb_position: "60% 50%"
+    full: "/assets/img/budget.png"
+
+  - title: "Fenerbahce.org"
+    category: "Sports"
+    description: "Official club site with e-commerce, subscription payments, player data integrations, and marketing automation."
+    tags: ["E-Comm", "Integrations", "Automation", "C#", "Kentico", "CMS"]
+    thumb: "/assets/img/fenerbahce_thumb.png"
+    thumb_position: "50% 50%"
+    full: "/assets/img/fenerbahce.png"
+
+  - title: "Koç Corporate"
+    category: "Corporate"
+    description: "Modernized corporate identity and CMS rollout."
+    tags: ["CMS", "Design System", "C#", "Kentico"]
+    thumb: "/assets/img/koc-com-tr_thumb.png"
+    thumb_position: "50% 50%"
+    full: "/assets/img/koc-com-tr.png"
+
+  - title: "divan.com.tr"
+    category: "E-Comm"
+    description: "Hotel booking and events/tickets for Divan's properties."
+    tags: [".NET", "C#", "Kentico", "Payments"]  
+    thumb: "/assets/img/divan-com-tr_thumb.png"
+    thumb_position: "50% 50%"
+    full: "/assets/img/divan-com-tr.png"
+
+  - title: "Ford Turkey (ford.com.tr)"
+    category: "Automotive"
+    description: "National brand site with marketing automation and CRM integrations."
+    tags: ["CRM", "Automation", "Integrations", "C#", "Kentico"]
+    thumb: "/assets/img/ford_thumb.png"
+    thumb_position: "50% 50%"
+    full: "/assets/img/ford.png"
+
+  - title: "KTSK"
+    category: "Sports"
+    description: "Koç Community Sports Club site with purchasing flows."
+    tags: ["E-Comm", "Web", "C#", "Kentico"]
+    thumb: "/assets/img/ktsk_thumb.png"
+    thumb_position: "50% 50%"
+    full: "/assets/img/ktsk.png"
+
+more:
+  - title: "WeFocus SaaS Platform"
+    category: "SaaS"
+    description: "Employee engagement platform built with Java microservices, VueJS, PostgreSQL, Kubernetes, Istio; improved performance by 30% via service optimization."
+    tags: ["Java", "Vue", "Kubernetes", "Istio"]
+    thumb: "/assets/img/modernization-roadmap.png"
+    thumb_position: "50% 50%"
+
+  - title: "Petal Maps"
+    category: "Mobile"
+    description: "Navigation app for HarmonyOS, Android, and iOS; Spring Boot, Kafka, Redis, MyBatis. Led architecture and performance across platforms."
+    tags: ["Spring Boot", "Kafka", "Redis"]
+    thumb: "/assets/img/modernization-roadmap.png"
+    thumb_position: "30% 50%"
+
+  
+
+  - title: "divanpastaneleri.com.tr"
+    category: "E-Comm"
+    description: "Retail commerce on nopCommerce for Divan patisserie."
+    tags: ["nopCommerce", "C#", "Payments"]
+
+  - title: "TurkTraktor"
+    category: "Web"
+    description: "Vehicle catalog and specs for the core brand."
+    tags: ["CMS", "Catalog", "C#", "Kentico"]
+
+  - title: "New Holland Turkey"
+    category: "Web"
+    description: "Localized brand site with product specs and marketing automation."
+    tags: ["CMS", "Automation", "C#", "Kentico"]
+
+  - title: "Case IH Turkey"
+    category: "Web"
+    description: "Equipment catalog and lead capture for Case IH."
+    tags: ["CMS", "Catalog", "C#", "Kentico"]
+
+  - title: "KoçDigital"
+    category: "Corporate"
+    description: "Innovation-focused corporate site."
+    tags: ["Web", "CMS", "C#", "Kentico"]
+
+  - title: "E-DNA Mobile App"
+    category: "Mobile"
+    description: "Android app powered by QlikSense dashboards; live sales/ops data for staff."
+    tags: ["Android", "QlikSense", "Dashboards"]
+
+  
+
+  - title: "Eczacibasi Ilaç Pazarlama"
+    category: "Corporate"
+    description: "Corporate web presence and content platform."
+    tags: ["CMS", "Web", "C#", "Kentico"]
+
+  - title: "Selfit"
+    category: "E-Comm"
+    description: "Fitness e-commerce with marketplace integrations."
+    tags: ["E-Comm", "Marketplace", "C#", "Kentico"]
+
+  - title: "Dynavit"
+    category: "E-Comm"
+    description: "Health product e-commerce with marketplace integrations."
+    tags: ["E-Comm", "Marketplace", "C#", "Kentico"]
+
+  - title: "Tokeninc"
+    category: "Fintech"
+    description: "Brand site with fintech integrations and partner APIs."
+    tags: ["Fintech", "Integrations", "C#", "Kentico"]
+
+  - title: "Zubizu QR Event App"
+    category: "Mobile"
+    description: "Interactive event Android app."
+    tags: ["Android", "Events"]
+
+  - title: "Bayer Cropscience App"
+    category: "Mobile"
+    description: "Android for agricultural and environmental management."
+    tags: ["Android", "Agriculture"]
+
+  - title: "Amerikan Hastanesi"
+    category: "Healthcare"
+    description: "Hospital web platform with online appointments and payments."
+    tags: ["Payments", "Appointments", "Healthcare", "C#", "Kentico"]
+
+  - title: "Koç University Hospital"
+    category: "Healthcare"
+    description: "Patient-facing site with booking and online payments."
+    tags: ["Payments", "Appointments", "Healthcare", "C#", "Kentico"]
+
+  - title: "KoçZer"
+    category: "Corporate"
+    description: "Service division corporate site."
+    tags: ["Web", "CMS", "C#", "Kentico"]
+
+  - title: "Textile Automation (Android)"
+    category: "Mobile"
+    description: "Factory floor automation terminal for all staff; Android device + server + admin panel to assign work and monitor operations."
+    tags: ["Android", "Backend", "Admin Panel"]
+
+  - title: "DMS Dashboard (Dogus Holding)"
+    category: "Mobile"
+    description: "Android dashboard app for C-level leaders showing live revenue across Dogus brands."
+    tags: ["Android", "Dashboard", "Analytics"]
+
+  - title: "Women's Health Social App"
+    category: "Mobile"
+    description: "Android-native community similar to LinkedIn, focused on women's health; posts, images, DMs."
+    tags: ["Android", "Social", "Messaging"]
+
+  - title: "Pharmacy Gamified Training"
+    category: "Mobile"
+    description: "Android app for pharmacy staff: quizzes, levels, rewards; product education with gamification."
+    tags: ["Android", "Gamification", "Training"]
+
+  - title: "Coffee Fortune App"
+    category: "Mobile"
+    description: "Android app where users submit photos for coffee fortune readings."
+    tags: ["Android", "Consumer", "Media"]
+
+  - title: "CepCard Mobile Payment"
+    category: "Fintech"
+    description: "Wallet integration and secure in-app payments."
+    tags: ["Payments", "Android"]
