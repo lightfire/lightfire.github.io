@@ -28,3 +28,6 @@ defaults:
       layout: post
       author: "Kadir Ergün"
       permalink: /blog/:year/:month/:day/:title/
+
+include:
+  - .well-known
