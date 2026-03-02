@@ -130,26 +130,7 @@ ul li {
   body {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-  }
-  .container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    position: absolute;
-    inset: 0;
-  }
-  * {
-    -webkit-print-color-adjust: exact;
-    color-adjust: exact;
-  }
-  body * {
-    visibility: hidden;
-  }
-  .container,
-  .container * {
-    visibility: visible;
+    background: #ffffff;
   }
 }
 .text-center {
@@ -993,8 +974,7 @@ a:hover {
 }
 .cv-page .cv-section h2 {
   margin: 12px 0 2px;
-  font-size: 12px;
-  letter-spacing: 0.12em;
+  font-size: 14px;
   text-transform: uppercase;
   color: #666;
   border-bottom: 1px solid #eee;
@@ -1088,26 +1068,139 @@ a:hover {
   }
 }
 @media print {
-  .cv-page .site-header,
-  .cv-page .site-footer,
-  .cv-page .cv-print-btn {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+  .cv-print-btn,
+  .site-header,
+  .site-footer {
     display: none !important;
   }
-  .cv-page body {
+  body,
+  .site-shell,
+  .site-main {
     background: #ffffff !important;
+    color: #111111 !important;
   }
-  .cv-page .site-shell {
-    background: #ffffff !important;
+  .site-main {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
-  .cv-page .container,
-  .cv-page.container {
-    width: 210mm !important;
+  #cv-sheet {
+    position: static !important;
+    width: 100% !important;
     max-width: 210mm !important;
-    margin: 0 auto !important;
-    padding: 12mm 14mm !important;
-    border: none !important;
-    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
     border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-family: "Calibri", Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  #cv-sheet *,
+  #cv-sheet *::before,
+  #cv-sheet *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color: inherit !important;
+    font-family: inherit !important;
+    -webkit-text-size-adjust: 100%;
+  }
+  #cv-sheet .cv-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+  #cv-sheet .cv-heading {
+    padding-right: 12px !important;
+  }
+  #cv-sheet .cv-heading h1 {
+    font-size: 30px !important;
+    color: #222222 !important;
+  }
+  #cv-sheet .cv-title {
+    margin: 4px 0 10px !important;
+    font-size: 16px !important;
+    color: #444444 !important;
+  }
+  #cv-sheet .cv-contact {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 14px !important;
+    font-size: 12.5px !important;
+    color: #555555 !important;
+  }
+  #cv-sheet .cv-contact > * {
+    display: inline !important;
+    margin: 0 !important;
+  }
+  #cv-sheet .cv-item-meta {
+    min-width: 0 !important;
+    text-align: right !important;
+    white-space: normal !important;
+  }
+  #cv-sheet .cv-photo,
+  #cv-sheet .profile-picture {
+    display: block !important;
+    width: 96px !important;
+    height: 96px !important;
+    margin: 0 0 0 20px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #e5e5e5 !important;
+  }
+  #cv-sheet .cv-item-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  #cv-sheet .cv-item {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+  #cv-sheet .cv-section {
+    gap: 6px !important;
+  }
+  #cv-sheet .cv-section h2 {
+    margin: 12px 0 2px !important;
+    padding: 0 0 6px !important;
+    border-bottom: 1px solid #eeeeee !important;
+    color: #666666 !important;
+    text-transform: uppercase !important;
+    font-size: 14px !important;
+  }
+  #cv-sheet .cv-item {
+    padding: 8px 0 !important;
+    border-bottom: 1px solid #f3f3f3 !important;
+  }
+  #cv-sheet .cv-item:last-child {
+    border-bottom: 0 !important;
+  }
+  #cv-sheet a {
+    text-decoration: none !important;
+    color: #1d4ed8 !important;
+  }
+  #cv-sheet .cv-item-company {
+    color: #1d4ed8 !important;
+    font-weight: 600 !important;
+  }
+  #cv-sheet .cv-location,
+  #cv-sheet .cv-item-meta {
+    color: #666666 !important;
   }
 }
 
