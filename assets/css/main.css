@@ -1202,6 +1202,9 @@ a:hover {
   #cv-sheet .cv-item-meta {
     color: #666666 !important;
   }
+  #portalier-widget-container {
+    display: none !important;
+  } 
 }
 
 /* Print Button */
